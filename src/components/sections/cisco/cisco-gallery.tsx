@@ -1,6 +1,15 @@
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { SkeletonBlock } from "@/components/ui/skeleton-block";
+import Image from "next/image";
+
+const ciscoImages = [
+  { src: "/assets/inacomp/cisco/satu.jpeg", alt: "Galeri Cisco Networking 1" },
+  { src: "/assets/inacomp/cisco/dua.jpeg", alt: "Galeri Cisco Networking 2" },
+  { src: "/assets/inacomp/cisco/tiga.jpeg", alt: "Galeri Cisco Networking 3" },
+  { src: "/assets/inacomp/cisco/empat.jpeg", alt: "Galeri Cisco Networking 4" },
+  { src: "/assets/inacomp/cisco/lima.jpeg", alt: "Galeri Cisco Networking 5" },
+  { src: "/assets/inacomp/cisco/enam.jpeg", alt: "Galeri Cisco Networking 6" },
+];
 
 export function CiscoGallery() {
   return (
@@ -9,20 +18,23 @@ export function CiscoGallery() {
         <div className="space-y-8">
           <SectionHeading
             eyebrow="Galeri Cisco Networking INACOMP 1.0"
-            title="Dokumentasi cabang networking tahun lalu ditampilkan sebagai modern skeleton gallery."
-            description="Galeri ini menjaga ritme visual halaman tetap hidup dengan placeholder bernuansa dokumentasi event, tanpa menggunakan foto asli."
+            title="Dokumentasi Cisco Networking Competition."
+            description="Melihat kembali antusiasme para peserta dalam memecahkan tantangan jaringan pada penyelenggaraan INACOMP sebelumnya."
           />
 
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {ciscoImages.map((image, index) => (
               <div
-                key={item}
-                className="surface-card overflow-hidden bg-gradient-to-br from-white to-cyan-50/50 p-4"
+                key={index}
+                className="surface-card group overflow-hidden p-3 transition-all duration-300 hover:border-brand-primary/30"
               >
-                <SkeletonBlock className="aspect-[16/10] w-full border-0" />
-                <div className="mt-4 space-y-3">
-                  <SkeletonBlock className="h-4 w-2/3 rounded-full border-0" />
-                  <SkeletonBlock className="h-4 w-1/2 rounded-full border-0" />
+                <div className="relative aspect-[16/10] overflow-hidden rounded-[20px]">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
               </div>
             ))}

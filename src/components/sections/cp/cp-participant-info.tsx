@@ -5,22 +5,17 @@ const infoCards = [
   {
     value: "SMA/SMK/Sederajat",
     label: "Target peserta",
-    accent: "from-brand-indigo/10 to-brand-cyan/10",
+    accent: "from-brand-primary/12 to-white",
   },
   {
     value: "Maksimal 2 Orang",
     label: "Komposisi tim",
-    accent: "from-brand-emerald/10 to-brand-cyan/10",
+    accent: "from-brand-primary-strong/12 to-white",
   },
   {
     value: "Skala Nasional",
     label: "Cakupan kompetisi",
-    accent: "from-brand-amber/10 to-brand-indigo/10",
-  },
-  {
-    value: "Kolaboratif & Terstruktur",
-    label: "Karakter lomba",
-    accent: "from-slate-100 to-white",
+    accent: "from-brand-accent/10 to-white",
   },
 ];
 

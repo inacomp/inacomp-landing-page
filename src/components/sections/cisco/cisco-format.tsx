@@ -23,7 +23,7 @@ export function CiscoFormat() {
   return (
     <section id="format" className="section-shell">
       <Container>
-        <div className="surface-card bg-gradient-to-br from-white via-cyan-50/35 to-blue-50/50 p-6 sm:p-8 lg:p-10">
+        <div className="surface-card bg-gradient-to-br from-white via-brand-primary/5 to-brand-accent/10 p-6 sm:p-8 lg:p-10">
           <SectionHeading
             eyebrow="Format Kompetisi"
             title="Struktur kompetisi disajikan jelas, rapi, dan tetap menyisakan detail teknis untuk guidebook serta technical meeting."
@@ -32,8 +32,8 @@ export function CiscoFormat() {
 
           <div className="mt-8 grid gap-4 lg:grid-cols-3">
             {formatItems.map((item, index) => (
-              <div key={item.title} className="rounded-[24px] border border-cyan-100/80 bg-white/85 p-6">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-navy text-sm font-semibold text-white">
+              <div key={item.title} className="rounded-[24px] border border-border bg-white/74 p-6 backdrop-blur-sm">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-dark text-sm font-semibold text-white">
                   0{index + 1}
                 </div>
                 <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>

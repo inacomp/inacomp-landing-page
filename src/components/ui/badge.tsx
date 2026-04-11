@@ -6,10 +6,10 @@ type BadgeProps = {
 };
 
 const toneClasses = {
-  brand: "border-brand-indigo/15 bg-brand-indigo/10 text-brand-indigo",
-  emerald: "border-brand-emerald/15 bg-brand-emerald/10 text-brand-emerald",
-  amber: "border-brand-amber/20 bg-brand-amber/10 text-[#9a6500]",
-  neutral: "border-border bg-white/80 text-foreground",
+  brand: "border-brand-primary/18 bg-brand-primary/12 text-brand-dark",
+  emerald: "border-brand-primary-strong/18 bg-brand-primary-strong/12 text-brand-dark",
+  amber: "border-brand-accent/14 bg-brand-accent/10 text-brand-accent",
+  neutral: "border-border bg-white/72 text-foreground",
 };
 
 export function Badge({ children, tone = "neutral" }: BadgeProps) {

@@ -1,9 +1,16 @@
 import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { SkeletonBlock } from "@/components/ui/skeleton-block";
+import { Lock } from "lucide-react";
 
 export function CiscoSecretTopics() {
+  const topics = [
+    { name: "Layer 2 Switching", code: "L2-SW-01" },
+    { name: "IP Connectivity", code: "IP-RT-02" },
+    { name: "IP Services", code: "IP-SRV-03" },
+    { name: "Security Fundamentals", code: "SEC-FND-04" },
+  ];
+
   return (
     <section className="section-shell">
       <Container>
@@ -14,8 +21,8 @@ export function CiscoSecretTopics() {
             description="Untuk menjaga fairness, fokus kompetisi, dan kualitas tantangan, detail topik tidak dibuka di landing page. Informasi teknis yang relevan akan disampaikan melalui kanal resmi sesuai kebutuhan penyelenggaraan."
           />
 
-          <div className="surface-card relative overflow-hidden p-6 sm:p-8">
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-cyan/8 via-transparent to-brand-indigo/10" />
+          <div className="surface-card relative overflow-hidden p-6 sm:p-8 group">
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/8 via-transparent to-brand-accent/10" />
             <div className="relative">
               <div className="mb-5 flex flex-wrap gap-3">
                 <Badge tone="neutral">Hidden</Badge>
@@ -23,15 +30,25 @@ export function CiscoSecretTopics() {
                 <Badge tone="emerald">Confidential</Badge>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
-                {[1, 2, 3, 4].map((item) => (
+                {topics.map((item, idx) => (
                   <div
-                    key={item}
-                    className="rounded-[24px] border border-dashed border-cyan-100 bg-[linear-gradient(180deg,_rgba(255,255,255,0.92),_rgba(236,247,255,0.75))] p-4"
+                    key={idx}
+                    className="relative overflow-hidden rounded-[24px] border border-dashed border-border bg-white/66 p-5 backdrop-blur-sm transition-all duration-300 hover:border-brand-primary/50"
                   >
-                    <SkeletonBlock className="h-28 w-full border-0 blur-[2px]" />
-                    <div className="mt-4 flex items-center justify-between text-sm text-muted">
-                      <span>Network topic locked</span>
-                      <span className="font-mono">••••</span>
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                       <Lock className="w-8 h-8 text-brand-primary/20" />
+                    </div>
+                    <div className="relative blur-[3px] select-none">
+                      <p className="font-mono text-[10px] uppercase tracking-widest text-brand-dark/40">{item.code}</p>
+                      <h4 className="mt-2 text-lg font-bold text-foreground/40">{item.name}</h4>
+                      <div className="mt-4 space-y-2">
+                         <div className="h-2 w-full bg-gray-100 rounded-full" />
+                         <div className="h-2 w-2/3 bg-gray-100 rounded-full" />
+                      </div>
+                    </div>
+                    <div className="mt-4 flex items-center justify-between text-[11px] font-medium text-muted/60 font-mono">
+                      <span>SECURE_DATA</span>
+                      <span>••••</span>
                     </div>
                   </div>
                 ))}
@@ -43,3 +60,4 @@ export function CiscoSecretTopics() {
     </section>
   );
 }
+

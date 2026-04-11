@@ -8,7 +8,7 @@ export function CPClosingCTA() {
         <div className="surface-card px-6 py-8 sm:px-8 lg:px-12 lg:py-10">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-3xl space-y-4">
-              <p className="font-mono text-xs font-semibold uppercase tracking-[0.3em] text-brand-indigo">
+              <p className="font-mono text-xs font-semibold uppercase tracking-[0.3em] text-brand-primary-strong">
                 Closing CTA
               </p>
               <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
@@ -21,7 +21,7 @@ export function CPClosingCTA() {
 
             <Link
               href="#"
-              className="inline-flex h-13 shrink-0 items-center justify-center rounded-full bg-brand-indigo px-7 text-sm font-semibold text-white shadow-soft hover:bg-brand-navy"
+              className="inline-flex h-13 shrink-0 items-center justify-center rounded-full bg-brand-primary px-7 text-sm font-semibold text-white shadow-soft hover:bg-brand-primary-strong"
             >
               Daftar Competitive Programming
             </Link>

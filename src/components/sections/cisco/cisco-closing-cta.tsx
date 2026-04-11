@@ -5,10 +5,10 @@ export function CiscoClosingCTA() {
   return (
     <section id="daftar" className="section-shell pt-4">
       <Container>
-        <div className="surface-card bg-gradient-to-br from-white via-cyan-50/45 to-blue-50/60 px-6 py-8 sm:px-8 lg:px-12 lg:py-10">
+        <div className="surface-card bg-gradient-to-br from-white via-brand-primary/5 to-brand-accent/10 px-6 py-8 sm:px-8 lg:px-12 lg:py-10">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-3xl space-y-4">
-              <p className="font-mono text-xs font-semibold uppercase tracking-[0.3em] text-brand-indigo">
+              <p className="font-mono text-xs font-semibold uppercase tracking-[0.3em] text-brand-primary-strong">
                 Closing CTA
               </p>
               <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
@@ -21,7 +21,7 @@ export function CiscoClosingCTA() {
 
             <Link
               href="#"
-              className="inline-flex h-13 shrink-0 items-center justify-center rounded-full bg-brand-navy px-7 text-sm font-semibold text-white shadow-soft hover:bg-brand-indigo"
+              className="inline-flex h-13 shrink-0 items-center justify-center rounded-full bg-brand-dark px-7 text-sm font-semibold text-white shadow-soft hover:bg-brand-accent"
             >
               Daftar Cisco Networking
             </Link>

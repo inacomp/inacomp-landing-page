@@ -18,7 +18,9 @@ export const metadata: Metadata = {
 
 export default function CiscoNetworkingPage() {
   return (
-    <div className="pb-10">
+    <div className="page-shell page-shell-cisco">
+      <div className="pointer-events-none absolute inset-0 -z-[1] bg-network-mesh opacity-35" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[36rem] bg-[radial-gradient(circle_at_16%_8%,_rgba(83,170,161,0.18),_transparent_24%),radial-gradient(circle_at_84%_14%,_rgba(45,73,93,0.22),_transparent_24%)]" />
       <CiscoHero />
       <CiscoAbout />
       <CiscoParticipantInfo />

@@ -5,22 +5,17 @@ const infoCards = [
   {
     value: "Maksimal 2 Orang",
     label: "Komposisi tim",
-    accent: "from-brand-indigo/10 to-brand-cyan/10",
+    accent: "from-brand-primary/12 to-white",
   },
   {
-    value: "Peminat Jaringan Komputer",
+    value: "Jaringan Komputer",
     label: "Profil peserta",
-    accent: "from-cyan-100/70 to-teal-50",
+    accent: "from-brand-primary-strong/12 to-white",
   },
   {
     value: "Skala Nasional",
     label: "Cakupan kompetisi",
-    accent: "from-brand-navy/8 to-brand-cyan/8",
-  },
-  {
-    value: "Analitis & Kolaboratif",
-    label: "Karakter peserta",
-    accent: "from-slate-100 to-white",
+    accent: "from-brand-accent/10 to-white",
   },
 ];
 

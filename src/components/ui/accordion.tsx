@@ -14,61 +14,95 @@ type AccordionProps = {
   variant?: AccordionVariant;
 };
 
-const accordionStyles: Record<AccordionVariant, {
-  item: string;
-  button: string;
-  question: string;
-  iconWrapper: string;
-  answer: string;
-}> = {
-  default: {
-    item: "surface-card overflow-hidden",
-    button: "flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-6",
-    question: "text-base font-semibold text-foreground sm:text-lg",
-    iconWrapper:
-      "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border bg-slate-50 text-brand-indigo",
-    answer: "border-t border-border px-5 pb-5 pt-4 text-sm leading-7 text-muted sm:px-6 sm:text-base",
-  },
-  landing: {
-    item: "rounded-[1.75rem] border border-white/80 bg-white/85 p-5 shadow-soft backdrop-blur-sm sm:p-6",
-    button: "flex w-full items-start justify-between gap-4 text-left",
-    question: "text-base font-semibold text-brand-navy sm:text-lg",
-    iconWrapper: "flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-50 text-brand-indigo",
-    answer: "pt-4 text-sm leading-7 text-slate-600 sm:text-base",
-  },
-};
-
 export function Accordion({ items, variant = "default" }: AccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const styles = accordionStyles[variant];
+
+  const isLanding = variant === "landing";
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       {items.map((item, index) => {
         const isOpen = openIndex === index;
 
         return (
-          <div key={item.question} className={styles.item}>
+          <div
+            key={item.question}
+            className={`
+              cursor-pointer overflow-hidden transition-all duration-300
+              ${isLanding
+                ? `rounded-[1.75rem] border backdrop-blur-sm
+                   ${isOpen
+                     ? "border-brand-primary/30 bg-white shadow-[0_8px_32px_rgba(34,70,76,0.1)]"
+                     : "border-border bg-white/72 shadow-soft hover:border-brand-primary/20 hover:bg-white/88 hover:shadow-[0_6px_24px_rgba(34,70,76,0.08)]"
+                   }`
+                : `surface-card
+                   ${isOpen ? "ring-1 ring-brand-primary/15" : "hover:shadow-md"}`
+              }
+            `}
+            onClick={() => setOpenIndex(isOpen ? null : index)}
+          >
             <button
               type="button"
-              className={styles.button}
-              onClick={() => setOpenIndex(isOpen ? null : index)}
+              className={`
+                flex w-full items-center gap-4 text-left
+                ${isLanding ? "px-5 py-5 sm:px-6 sm:py-5" : "px-5 py-5 sm:px-6"}
+              `}
               aria-expanded={isOpen}
+              onClick={(e) => e.stopPropagation()}
             >
-              <span className={styles.question}>{item.question}</span>
-              <span className={styles.iconWrapper}>
-                {variant === "landing" ? (
-                  <span className={`text-xl leading-none transition ${isOpen ? "rotate-45" : ""}`}>
-                    +
-                  </span>
-                ) : isOpen ? (
-                  "−"
-                ) : (
-                  "+"
-                )}
+              <span className={`
+                flex-1 font-semibold leading-snug transition-colors duration-200
+                ${isLanding
+                  ? `text-base sm:text-lg ${isOpen ? "text-brand-dark" : "text-brand-dark/85"}`
+                  : "text-base text-foreground sm:text-lg"
+                }
+              `}>
+                {item.question}
+              </span>
+
+              <span className={`
+                inline-flex shrink-0 items-center justify-center rounded-full transition-all duration-300
+                ${isLanding
+                  ? `h-10 w-10 border
+                     ${isOpen
+                       ? "border-brand-primary/30 bg-brand-primary text-white shadow-[0_4px_12px_rgba(83,170,161,0.3)]"
+                       : "border-brand-primary/15 bg-brand-primary/8 text-brand-dark"
+                     }`
+                  : `h-9 w-9 border border-border
+                     ${isOpen ? "bg-brand-primary/15 text-brand-dark" : "bg-brand-primary/8 text-brand-dark"}`
+                }
+              `}>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${isOpen ? "rotate-45" : "rotate-0"}`}
+                >
+                  <line x1="7" y1="1" x2="7" y2="13" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                  <line x1="1" y1="7" x2="13" y2="7" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                </svg>
               </span>
             </button>
-            {isOpen ? <div className={styles.answer}>{item.answer}</div> : null}
+
+            <div
+              className={`grid transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+              }`}
+            >
+              <div className="overflow-hidden">
+                <div className={`
+                  text-sm leading-7 sm:text-base
+                  ${isLanding
+                    ? "px-5 pb-5 pt-1 text-muted sm:px-6 sm:pb-6"
+                    : "border-t border-border px-5 pb-5 pt-4 text-muted sm:px-6"
+                  }
+                `}>
+                  {item.answer}
+                </div>
+              </div>
+            </div>
           </div>
         );
       })}

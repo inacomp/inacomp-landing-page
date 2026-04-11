@@ -8,6 +8,7 @@ import { CPGuidebookCTA } from "@/components/sections/cp/cp-guidebook-cta";
 import { CPHero } from "@/components/sections/cp/cp-hero";
 import { CPParticipantInfo } from "@/components/sections/cp/cp-participant-info";
 import { CPSecretScoring } from "@/components/sections/cp/cp-secret-scoring";
+import { CPSecretSkills } from "@/components/sections/cp/cp-secret-skills";
 import { CPSecretTopics } from "@/components/sections/cp/cp-secret-topics";
 
 export const metadata: Metadata = {
@@ -18,12 +19,14 @@ export const metadata: Metadata = {
 
 export default function CompetitiveProgrammingPage() {
   return (
-    <div className="pb-10">
+    <div className="page-shell page-shell-cp">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[32rem] bg-[radial-gradient(circle_at_top,_rgba(83,170,161,0.18),_transparent_34%),radial-gradient(circle_at_82%_12%,_rgba(45,73,93,0.12),_transparent_20%)]" />
       <CPHero />
       <CPAbout />
       <CPParticipantInfo />
       <CPFormat />
       <CPSecretTopics />
+      <CPSecretSkills />
       <CPSecretScoring />
       <CPGallery />
       <CPFaq />
@@ -32,3 +35,4 @@ export default function CompetitiveProgrammingPage() {
     </div>
   );
 }
+

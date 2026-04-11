@@ -15,7 +15,7 @@ export function SectionHeading({
 
   return (
     <div className={`flex max-w-3xl flex-col gap-4 ${alignClass}`}>
-      <span className="font-mono text-xs font-semibold uppercase tracking-[0.32em] text-brand-indigo">
+      <span className="font-mono text-xs font-semibold uppercase tracking-[0.32em] text-brand-primary-strong">
         {eyebrow}
       </span>
       <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">

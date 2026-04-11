@@ -5,7 +5,7 @@ type SkeletonBlockProps = {
 export function SkeletonBlock({ className = "" }: SkeletonBlockProps) {
   return (
     <div
-      className={`rounded-3xl border border-white/70 bg-linear-to-br from-slate-200/80 via-slate-100 to-white ${className}`.trim()}
+      className={`rounded-3xl border border-white/60 bg-linear-to-br from-brand-primary/14 via-white to-brand-accent/8 ${className}`.trim()}
     />
   );
 }

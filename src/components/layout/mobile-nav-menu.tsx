@@ -20,7 +20,7 @@ export function MobileNavMenu({ navLinks }: MobileNavMenuProps) {
       <button
         type="button"
         onClick={() => setIsOpen((open) => !open)}
-        className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-border bg-white text-foreground lg:hidden"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-border bg-white/72 text-foreground backdrop-blur-sm lg:hidden"
         aria-expanded={isOpen}
         aria-controls="mobile-nav-menu"
         aria-label="Buka menu navigasi"
@@ -40,7 +40,7 @@ export function MobileNavMenu({ navLinks }: MobileNavMenuProps) {
                 key={link.label}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="rounded-2xl px-3 py-2 text-sm font-medium text-muted hover:bg-slate-50 hover:text-brand-indigo"
+                className="rounded-2xl px-3 py-2 text-sm font-medium text-muted hover:bg-brand-primary/8 hover:text-brand-dark"
               >
                 {link.label}
               </Link>
@@ -48,7 +48,7 @@ export function MobileNavMenu({ navLinks }: MobileNavMenuProps) {
             <Link
               href="/cisco-networking#daftar"
               onClick={() => setIsOpen(false)}
-              className="mt-2 inline-flex h-11 items-center justify-center rounded-full bg-brand-indigo px-5 text-sm font-semibold text-white"
+              className="mt-2 inline-flex h-11 items-center justify-center rounded-full bg-brand-primary px-5 text-sm font-semibold text-white hover:bg-brand-primary-strong"
             >
               Daftar Sekarang
             </Link>

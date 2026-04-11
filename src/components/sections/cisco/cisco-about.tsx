@@ -34,7 +34,7 @@ export function CiscoAbout() {
             {pillars.map((pillar) => (
               <div
                 key={pillar.title}
-                className="surface-card bg-gradient-to-br from-white via-cyan-50/40 to-blue-50/70 p-6"
+                className="surface-card bg-gradient-to-br from-white via-brand-primary/5 to-brand-accent/10 p-6"
               >
                 <h3 className="text-lg font-semibold text-foreground">{pillar.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-muted sm:text-base">

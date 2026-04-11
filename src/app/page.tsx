@@ -1,30 +1,30 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FaqAccordion } from "@/components/faq-accordion";
 
-const stats = [
-  { label: "Skala", value: "Nasional" },
-  { label: "Cabang", value: "2 Kompetisi" },
-  { label: "Peserta", value: "SMA/SMK" },
-];
 
 const aboutHighlights = [
   {
     title: "Edisi Kedua",
+    icon: "sparkles",
     description:
       "INACOMP 2.0 hadir sebagai lanjutan kompetisi informatika yang semakin matang dan relevan.",
   },
   {
     title: "Diselenggarakan BEM PTIK UNJ",
+    icon: "school",
     description:
       "Dikurasi oleh Badan Eksekutif Mahasiswa PTIK Universitas Negeri Jakarta.",
   },
   {
     title: "Untuk Siswa/i SMA/SMK",
+    icon: "users",
     description:
       "Dirancang untuk peserta sederajat yang ingin bertanding, belajar, dan berkembang.",
   },
   {
     title: "Fokus Teknologi",
+    icon: "cpu",
     description:
       "Mengangkat dua ranah utama: pemrograman komputer dan jaringan komputer.",
   },
@@ -34,32 +34,53 @@ const tracks = [
   {
     title: "Competitive Programming",
     href: "/competitive-programming",
-    accent: "from-brand-indigo/15 via-white to-brand-amber/10",
-    badgeClass: "bg-brand-indigo text-white",
-    buttonClass: "bg-brand-indigo text-white hover:bg-brand-navy",
+    accent: "from-brand-primary/14 via-white to-brand-accent/8",
+    badgeClass: "bg-brand-primary text-white",
+    buttonClass: "bg-brand-primary text-white hover:bg-brand-primary-strong",
     description:
       "Untuk siswa yang ingin menguji logika, algoritma, dan ketelitian problem solving dalam atmosfer kompetisi yang cepat dan menantang.",
     points: ["Algoritma & logika", "Format kompetitif", "Cocok untuk problem solver"],
+    image: "/assets/booklet-cp.jpg"
   },
   {
     title: "Cisco Networking",
     href: "/cisco-networking",
-    accent: "from-brand-cyan/20 via-white to-brand-indigo/10",
-    badgeClass: "bg-brand-navy text-white",
-    buttonClass: "bg-brand-navy text-white hover:bg-brand-indigo",
+    accent: "from-brand-accent/12 via-white to-brand-primary/10",
+    badgeClass: "bg-brand-dark text-white",
+    buttonClass: "bg-brand-dark text-white hover:bg-brand-accent",
     description:
       "Untuk peserta yang tertarik pada jaringan komputer, troubleshooting, dan pemahaman infrastruktur digital yang aplikatif.",
     points: ["Networking fundamentals", "Cisco-oriented", "Hands-on problem mindset"],
+    image: "/assets/booklet-cisco.jpg"
+
   },
 ];
 
 const timelineItems = [
-  "Pendaftaran",
-  "Penutupan Pendaftaran",
-  "Technical Meeting",
-  "Babak Penyisihan",
-  "Babak Final",
-  "Pengumuman Pemenang",
+  {
+    date: "21 Mei – 28 Mei 2026",
+    title: "Pendaftaran Peserta Perlombaan",
+  },
+  {
+    date: "31 Mei 2026",
+    title: "Technical Meeting Penyisihan",
+  },
+  {
+    date: "2 Juni 2026",
+    title: "Penyisihan Competitive Programming dan Cisco Networking",
+  },
+  {
+    date: "4 Juni 2026",
+    title: "Pengumuman Finalis Perlombaan",
+  },
+  {
+    date: "9 Juni 2026",
+    title: "Technical Meeting Final",
+  },
+  {
+    date: "12 Juni 2026",
+    title: "Final dan Pengumuman Juara",
+  },
 ];
 
 const faqItems = [
@@ -90,33 +111,131 @@ const faqItems = [
   },
 ];
 
-const galleryHeights = [
-  "h-52 sm:h-64",
-  "h-72 sm:h-80",
-  "h-60 sm:h-72",
-  "h-80 sm:h-96",
-  "h-56 sm:h-64",
-  "h-72 sm:h-80",
+const galleryImages = [
+  { src: "/assets/inacomp/home/satu.png", alt: "Gallery 1", heightClass: "h-52 sm:h-64" },
+  { src: "/assets/inacomp/home/dua.png", alt: "Gallery 2", heightClass: "h-72 sm:h-80" },
+  { src: "/assets/inacomp/home/empat.jpg", alt: "Gallery 4", heightClass: "h-80 sm:h-96" },
+  { src: "/assets/inacomp/home/lima.jpeg", alt: "Gallery 5", heightClass: "h-56 sm:h-64" },
+  { src: "/assets/inacomp/home/enam.jpg", alt: "Gallery 6", heightClass: "h-72 sm:h-80" },
+  { src: "/assets/inacomp/home/tujuh.jpg", alt: "Gallery 7", heightClass: "h-64 sm:h-72" },
 ];
+
+function Icon({ name }: { name: string }) {
+  if (name === "sparkles")
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+        <path d="M5 3v4" />
+        <path d="M19 17v4" />
+        <path d="M3 5h4" />
+        <path d="M17 19h4" />
+        <path d="M21 3v2" />
+        <path d="M21 7v2" />
+        <path d="M19 5h2" />
+        <path d="M15 5h2" />
+      </svg>
+    );
+  if (name === "school")
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M14 22v-4a2 2 0 1 0-4 0v4" />
+        <path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2" />
+        <path d="M18 5v17" />
+        <path d="m4 6 8-4 8 4" />
+        <path d="M6 5v17" />
+        <circle cx="12" cy="9" r="2" />
+      </svg>
+    );
+  if (name === "users")
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    );
+  if (name === "cpu")
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <rect width="16" height="16" x="4" y="4" rx="2" />
+        <rect width="6" height="6" x="9" y="9" rx="1" />
+        <path d="M15 2v2" />
+        <path d="M15 20v2" />
+        <path d="M2 15h2" />
+        <path d="M2 9h2" />
+        <path d="M20 15h2" />
+        <path d="M20 9h2" />
+        <path d="M9 2v2" />
+        <path d="M9 20v2" />
+      </svg>
+    );
+  return null;
+}
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-screen flex-col overflow-hidden">
-      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[38rem] bg-[radial-gradient(circle_at_top,_rgba(67,199,255,0.18),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(54,92,255,0.2),_transparent_24%)]" />
+    <div className="page-shell page-shell-home flex min-h-screen flex-col">
+      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[38rem] bg-[radial-gradient(circle_at_top,_rgba(83,170,161,0.2),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(45,73,93,0.16),_transparent_24%)]" />
+      <div className="pointer-events-none absolute left-[-6rem] top-28 -z-10 h-64 w-64 rounded-full bg-brand-primary/14 blur-3xl animate-float-slow" />
+      <div className="pointer-events-none absolute right-[-8rem] top-36 -z-10 h-80 w-80 rounded-full bg-brand-accent/12 blur-3xl animate-glow-drift" />
 
       <div>
         <section className="px-4 pb-20 pt-10 sm:px-6 sm:pt-14 lg:px-8 lg:pb-28 lg:pt-16">
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div className="space-y-8">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-brand-indigo shadow-soft backdrop-blur-sm">
-                Informatics National Competition
-              </div>
-              <div className="space-y-6">
-                <h1 className="max-w-3xl font-mono text-4xl font-bold leading-tight tracking-tight text-brand-navy sm:text-5xl lg:text-7xl">
-                  Panggung kompetisi teknologi untuk generasi problem solver berikutnya.
-                </h1>
-                <p className="max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-                  Informatics National Competition (INACOMP) 2.0 merupakan kompetisi
+              <div>
+
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/72 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-brand-primary-strong shadow-soft backdrop-blur-sm">
+                  INACOMP
+                </div>
+                <div className="space-y-2">
+                  <h1 className="max-w-3xl font-mono text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-7xl">
+                    Informatics National Competition
+                  </h1>
+                </div>
+                <p className="max-w-2xl text-base leading-8 text-muted sm:text-lg">
+                  Informatics National Competition (INACOMP) merupakan kompetisi
                   yang berfokus pada bidang pemrograman komputer dan jaringan komputer.
                   Diselenggarakan oleh Badan Eksekutif Mahasiswa Prodi Pendidikan Teknik
                   Informatika dan Komputer Universitas Negeri Jakarta, kompetisi ini
@@ -127,92 +246,78 @@ export default function Home() {
               <div className="flex flex-col gap-3 sm:flex-row">
                 <a
                   href="#closing-cta"
-                  className="inline-flex items-center justify-center rounded-full bg-brand-indigo px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 hover:bg-brand-navy sm:text-base"
+                  className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3.5 text-sm font-semibold text-white shadow-soft hover:bg-brand-primary-strong sm:text-base"
                 >
                   Daftar Sekarang
                 </a>
                 <a
                   href="#cabang-lomba"
-                  className="inline-flex items-center justify-center rounded-full border border-border bg-white/80 px-6 py-3.5 text-sm font-semibold text-brand-navy hover:border-brand-sky hover:text-brand-indigo sm:text-base"
+                  className="inline-flex items-center justify-center rounded-full border border-border bg-white/78 px-6 py-3.5 text-sm font-semibold text-brand-dark hover:border-brand-primary hover:text-brand-dark sm:text-base"
                 >
                   Lihat Cabang Lomba
                 </a>
-              </div>
-              <div className="grid gap-3 sm:grid-cols-3">
-                {stats.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="rounded-[1.75rem] border border-white/80 bg-white/80 p-4 shadow-soft backdrop-blur-sm"
-                  >
-                    <p className="text-sm font-medium text-slate-500">{stat.label}</p>
-                    <p className="mt-2 text-lg font-semibold text-brand-navy">
-                      {stat.value}
-                    </p>
-                  </div>
-                ))}
               </div>
             </div>
 
             <div className="relative">
               <div className="bg-radial-brand shadow-soft relative overflow-hidden rounded-[2rem] border border-white/70 p-5 sm:p-7 lg:p-8">
-                <div className="bg-grid-soft absolute inset-0 opacity-60" />
+                <div className="bg-grid-soft absolute inset-0 opacity-45" />
+                <div className="pointer-events-none absolute -right-10 top-10 h-40 w-40 rounded-full bg-brand-primary/18 blur-3xl animate-float-slow" />
+                <div className="pointer-events-none absolute bottom-0 left-0 h-48 w-48 rounded-full bg-brand-accent/12 blur-3xl animate-glow-drift" />
                 <div className="relative space-y-5">
-                  <div className="flex items-center justify-between rounded-[1.5rem] border border-white/80 bg-white/85 px-4 py-3 shadow-sm backdrop-blur-sm">
+                  <div className="flex items-center justify-between rounded-[1.5rem] border border-white/80 bg-white/80 px-4 py-3 shadow-sm backdrop-blur-sm">
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">
-                        Opening Wave
+                        We're Back
                       </p>
-                      <p className="mt-1 text-lg font-semibold text-brand-navy">
-                        INACOMP 2.0 Launching Soon
+                      <p className="mt-1 text-lg font-semibold text-foreground">
+                        INACOMP 2.0
                       </p>
                     </div>
-                    <span className="rounded-full bg-brand-indigo px-3 py-1 text-xs font-semibold text-white">
+                    <span className="rounded-full bg-brand-primary px-3 py-1 text-xs font-semibold text-white">
                       Bright Mode
                     </span>
                   </div>
                   <div className="grid gap-4 sm:grid-cols-[1.2fr_0.8fr]">
-                    <div className="space-y-4 rounded-[1.75rem] border border-white/80 bg-white/85 p-4 shadow-sm backdrop-blur-sm">
-                      <div className="h-56 rounded-[1.5rem] bg-[linear-gradient(135deg,_rgba(54,92,255,0.14),_rgba(67,199,255,0.16))] sm:h-72" />
-                      <div className="grid grid-cols-3 gap-3">
-                        <div className="h-20 rounded-[1.25rem] bg-slate-100" />
-                        <div className="h-20 rounded-[1.25rem] bg-blue-50" />
-                        <div className="h-20 rounded-[1.25rem] bg-cyan-50" />
+                    <div className="flex flex-col items-center justify-center rounded-[1.75rem] border border-white/80 bg-white/80 p-6 shadow-sm backdrop-blur-sm">
+                      <div className="relative aspect-square w-full max-w-[280px] overflow-hidden rounded-[1.5rem] bg-[linear-gradient(135deg,_rgba(83,170,161,0.08),_rgba(45,73,93,0.06))] p-8 sm:p-12">
+                        <div className="relative h-full w-full">
+                          <Image
+                            src="/favicon/android-chrome-512x512.png"
+                            alt="INACOMP Logo"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div className="flex flex-col gap-4">
-                      <div className="rounded-[1.75rem] border border-white/80 bg-white/85 p-4 shadow-sm backdrop-blur-sm">
+                      <div className="rounded-[1.75rem] border border-white/80 bg-white/80 p-4 shadow-sm backdrop-blur-sm">
                         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted">
-                          Branch Focus
+                          Cabang Lomba
                         </p>
                         <div className="mt-4 space-y-3">
-                          <div className="rounded-[1.25rem] bg-blue-50 px-3 py-3 text-sm font-medium text-brand-navy">
+                          <div className="rounded-[1.25rem] bg-brand-primary/12 px-3 py-3 text-sm font-medium text-brand-dark">
                             Competitive Programming
                           </div>
-                          <div className="rounded-[1.25rem] bg-cyan-50 px-3 py-3 text-sm font-medium text-brand-navy">
+                          <div className="rounded-[1.25rem] bg-brand-accent/10 px-3 py-3 text-sm font-medium text-brand-dark">
                             Cisco Networking
                           </div>
                         </div>
                       </div>
-                      <div className="rounded-[1.75rem] border border-white/80 bg-brand-navy p-5 text-white shadow-lg shadow-slate-900/10">
-                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/70">
-                          Event Feel
+                      <div className="rounded-[1.75rem] border border-brand-dark/10 bg-brand-dark p-5 text-white shadow-soft">
+                        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/70">
+                          Penyelenggara
                         </p>
                         <p className="mt-3 text-xl font-semibold leading-snug">
-                          Modern, bold, premium, dan siap menarik perhatian dari first glance.
+                          Universitas Negeri Jakarta
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="absolute -bottom-5 left-4 rounded-[1.5rem] border border-white/80 bg-white/90 px-4 py-3 shadow-soft backdrop-blur-sm sm:left-auto sm:right-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-                  Untuk Siswa/i
-                </p>
-                <p className="mt-1 text-sm font-semibold text-brand-navy">
-                  SMA / SMK / Sederajat
-                </p>
-              </div>
+
             </div>
           </div>
         </section>
@@ -220,13 +325,13 @@ export default function Home() {
         <section id="tentang" className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div className="space-y-5">
-              <span className="inline-flex rounded-full border border-border bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-indigo">
+              <span className="inline-flex rounded-full border border-border bg-white/72 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary-strong">
                 Tentang INACOMP
               </span>
-              <h2 className="font-mono text-3xl font-bold leading-tight text-brand-navy sm:text-4xl lg:text-5xl">
+              <h2 className="font-mono text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
                 Kompetisi nasional yang mempertemukan semangat belajar, bertanding, dan berkembang.
               </h2>
-              <p className="text-base leading-8 text-slate-600 sm:text-lg">
+              <p className="text-base leading-8 text-muted sm:text-lg">
                 INACOMP 2.0 adalah edisi kedua dari Informatics National Competition.
                 Event ini dirancang sebagai ruang bagi siswa/i SMA/SMK/sederajat untuk
                 menunjukkan kemampuan di bidang pemrograman komputer dan jaringan
@@ -238,11 +343,13 @@ export default function Home() {
               {aboutHighlights.map((item) => (
                 <article
                   key={item.title}
-                  className="rounded-[1.75rem] border border-white/80 bg-white/85 p-6 shadow-soft backdrop-blur-sm"
+                  className="rounded-[1.75rem] border border-white/80 bg-white/76 p-6 shadow-soft backdrop-blur-sm"
                 >
-                  <div className="mb-4 h-11 w-11 rounded-2xl bg-[linear-gradient(135deg,_rgba(54,92,255,0.16),_rgba(67,199,255,0.22))]" />
-                  <h3 className="text-lg font-semibold text-brand-navy">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
+                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,_rgba(83,170,161,0.2),_rgba(45,73,93,0.18))] text-brand-primary-strong">
+                    <Icon name={item.icon} />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-muted sm:text-base">
                     {item.description}
                   </p>
                 </article>
@@ -254,68 +361,69 @@ export default function Home() {
         <section id="cabang-lomba" className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl space-y-10">
             <div className="max-w-3xl space-y-4">
-              <span className="inline-flex rounded-full border border-border bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-indigo">
+              <span className="inline-flex rounded-full border border-border bg-white/72 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary-strong">
                 Cabang Lomba
               </span>
-              <h2 className="font-mono text-3xl font-bold leading-tight text-brand-navy sm:text-4xl lg:text-5xl">
+              <h2 className="font-mono text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
                 Pilih jalur kompetisi yang paling sesuai dengan kekuatanmu.
               </h2>
-              <p className="text-base leading-8 text-slate-600 sm:text-lg">
+              <p className="text-base leading-8 text-muted sm:text-lg">
                 Dua cabang lomba utama disiapkan untuk peserta dengan minat yang berbeda,
                 namun tetap berada dalam satu ekosistem kompetisi teknologi yang solid.
               </p>
             </div>
 
-            <div className="grid gap-6 lg:grid-cols-2">
+            <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-2">
               {tracks.map((track) => (
                 <article
                   key={track.title}
-                  className={`relative overflow-hidden rounded-[2rem] border border-white/80 bg-gradient-to-br ${track.accent} p-6 shadow-soft sm:p-8`}
+                  className={`relative overflow-hidden rounded-[2rem] border border-white/80 bg-gradient-to-br ${track.accent} p-6 shadow-soft backdrop-blur-sm sm:p-7`}
                 >
-                  <div className="absolute right-6 top-6">
-                    <a
-                      href="#guidebook"
-                      className={`inline-flex rounded-full px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] ${track.badgeClass}`}
-                    >
-                      Download Guidebook
-                    </a>
-                  </div>
-                  <div className="space-y-6 pr-24">
+
+                  <div className="space-y-5">
                     <div>
-                      <p className="text-sm font-semibold uppercase tracking-[0.22em] text-muted">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-muted sm:text-xs">
                         INACOMP Track
                       </p>
-                      <h3 className="mt-3 font-mono text-2xl font-bold text-brand-navy sm:text-3xl">
+                      <h3 className="mt-2 font-mono text-xl font-bold text-foreground sm:text-2xl">
                         {track.title}
                       </h3>
                     </div>
-                    <p className="text-sm leading-7 text-slate-600 sm:text-base">
+                    <p className="text-xs leading-6 text-muted sm:text-sm sm:leading-7">
                       {track.description}
                     </p>
+                    <div className="relative h-56 overflow-hidden rounded-[1.75rem] border border-white/80 bg-[linear-gradient(135deg,_rgba(255,255,255,0.5),_rgba(83,170,161,0.12),_rgba(45,73,93,0.12))] sm:h-72">
+                      <Image
+                        src={track.image}
+                        alt={track.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                     <div className="grid gap-3 sm:grid-cols-3">
                       {track.points.map((point, index) => (
                         <div
                           key={point}
-                          className="rounded-[1.25rem] border border-white/80 bg-white/85 p-3 text-sm font-medium text-slate-700"
+                          className="rounded-[1.25rem] border border-white/80 bg-white/76 p-3 text-sm font-medium text-foreground"
                         >
-                          <span className="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-brand-navy">
+                          <span className="mb-2 flex h-7 w-7 items-center justify-center rounded-full bg-brand-primary/10 text-[10px] font-semibold text-brand-dark">
                             0{index + 1}
                           </span>
                           {point}
                         </div>
                       ))}
                     </div>
-                    <div className="h-48 rounded-[1.75rem] border border-white/80 bg-[linear-gradient(135deg,_rgba(255,255,255,0.45),_rgba(214,226,255,0.7))] sm:h-56" />
+
                     <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                       <Link
                         href={track.href}
-                        className={`inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold sm:text-base ${track.buttonClass}`}
+                        className={`inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold sm:py-3 ${track.buttonClass}`}
                       >
                         Lihat Detail
                       </Link>
                       <a
                         href="#guidebook"
-                        className="inline-flex items-center justify-center rounded-full border border-border bg-white/85 px-5 py-3 text-sm font-semibold text-brand-navy hover:border-brand-sky hover:text-brand-indigo sm:text-base"
+                        className="inline-flex items-center justify-center rounded-full border border-border bg-white/78 px-5 py-2.5 text-sm font-semibold text-brand-dark hover:border-brand-primary hover:text-brand-dark sm:py-3"
                       >
                         Download Guidebook
                       </a>
@@ -328,57 +436,115 @@ export default function Home() {
         </section>
 
         <section id="timeline" className="px-4 py-20 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-7xl rounded-[2.5rem] border border-white/80 bg-white/75 p-6 shadow-soft backdrop-blur-sm sm:p-8 lg:p-10">
+          <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.75rem] border border-white/70 bg-[linear-gradient(180deg,_rgba(255,255,255,0.72),_rgba(239,247,246,0.78))] p-6 shadow-soft backdrop-blur-xl sm:p-8 lg:p-12">
+            <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(83,170,161,0.2),_transparent_30%),radial-gradient(circle_at_top_right,_rgba(45,73,93,0.14),_transparent_24%),linear-gradient(180deg,_rgba(255,255,255,0.08),_rgba(81,158,151,0.04))]" />
+            <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_right,_rgba(34,70,76,0.04)_1px,_transparent_1px),linear-gradient(to_bottom,_rgba(34,70,76,0.04)_1px,_transparent_1px)] bg-[size:32px_32px] opacity-35 [mask-image:linear-gradient(180deg,rgba(0,0,0,0.7),transparent_96%)]" />
+            <div className="pointer-events-none absolute left-[-4rem] top-20 -z-10 h-40 w-40 rounded-full bg-brand-primary/18 blur-3xl" />
+            <div className="pointer-events-none absolute right-[-3rem] top-12 -z-10 h-52 w-52 rounded-full bg-brand-accent/14 blur-3xl" />
+
             <div className="max-w-3xl space-y-4">
-              <span className="inline-flex rounded-full border border-border bg-blue-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-indigo">
+              <span className="inline-flex rounded-full border border-white/80 bg-white/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary-strong backdrop-blur-sm">
                 Timeline
               </span>
-              <h2 className="font-mono text-3xl font-bold leading-tight text-brand-navy sm:text-4xl lg:text-5xl">
-                Alur kompetisi disusun sebagai perjalanan yang jelas dari registrasi hingga podium.
+              <h2 className="font-mono text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
+                Alur kompetisi tampil lebih tegas dalam satu garis perjalanan utama.
               </h2>
-              <p className="text-base leading-8 text-slate-600 sm:text-lg">
-                Timeline dirancang ringkas dan mudah dipahami agar peserta dapat melihat
-                progres event dari awal hingga akhir secara cepat.
+              <p className="text-base leading-8 text-muted sm:text-lg">
+                Setiap milestone disusun berurutan pada poros vertikal agar tanggal penting,
+                tahapan lomba, dan transisi menuju final terasa lebih jelas dalam sekali lihat.
               </p>
             </div>
 
-            <div className="mt-10 hidden gap-6 lg:grid lg:grid-cols-3">
-              {timelineItems.map((item, index) => (
-                <article
-                  key={item}
-                  className={`relative rounded-[2rem] border border-slate-200 bg-[linear-gradient(180deg,_white,_rgba(239,244,255,0.9))] p-6 ${index % 2 === 1 ? "translate-y-10" : ""}`}
-                >
-                  <div className="mb-5 flex items-center justify-between">
-                    <span className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">
-                      Step 0{index + 1}
-                    </span>
-                    <span className="h-3 w-3 rounded-full bg-brand-indigo" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-brand-navy">{item}</h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">
-                    Placeholder informasi tahap {index + 1} untuk memberikan gambaran ritme event secara umum.
-                  </p>
-                </article>
-              ))}
-            </div>
+            <div className="relative mt-14 sm:mt-16 lg:mt-20">
+              <div className="space-y-0">
+                {timelineItems.map((item, index) => {
+                  const isLast = index === timelineItems.length - 1;
+                  const isRight = !isLast && index % 2 === 0;
+                  const isLeft = !isLast && index % 2 !== 0;
 
-            <div className="mt-8 grid gap-4 lg:hidden">
-              {timelineItems.map((item, index) => (
-                <article
-                  key={item}
-                  className="rounded-[1.75rem] border border-white/80 bg-white/90 p-5"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-indigo text-sm font-semibold text-white">
-                      0{index + 1}
+                  const desktopAlign = isLast
+                    ? "lg:justify-center"
+                    : isRight
+                      ? "lg:justify-end lg:pr-20"
+                      : "lg:justify-start lg:pl-20";
+
+                  const cardClass = isLast
+                    ? "relative w-full max-w-[34rem] overflow-hidden rounded-[1.9rem] border border-white/85 bg-[linear-gradient(135deg,_rgba(255,255,255,0.96),_rgba(241,248,247,0.92))] px-5 py-5 text-left shadow-[0_22px_56px_rgba(34,70,76,0.12)] backdrop-blur-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-brand-primary/35 group-hover:shadow-[0_28px_68px_rgba(34,70,76,0.16)] sm:px-6 sm:py-6 lg:px-8 lg:py-7"
+                    : "relative w-full max-w-[28rem] overflow-hidden rounded-[1.75rem] border border-white/85 bg-[linear-gradient(135deg,_rgba(255,255,255,0.95),_rgba(241,248,247,0.9))] px-5 py-5 text-left shadow-[0_18px_50px_rgba(34,70,76,0.08)] backdrop-blur-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:border-brand-primary/35 group-hover:shadow-[0_24px_60px_rgba(34,70,76,0.12)] sm:px-6 sm:py-6 lg:px-7";
+
+                  return (
+                    <div key={item.title} className="group relative py-10 sm:py-12 lg:py-16">
+                      {/* Vertical Line Fragment */}
+                      <div className="absolute left-5 top-0 h-full w-px lg:left-1/2">
+                        <div
+                          className={`w-full border-l-[1.5px] border-dashed border-brand-primary/25 ${index === 0 ? "mt-[28%] h-[72%]" : isLast ? "h-[26%]" : "h-full"}`}
+                        />
+                      </div>
+
+                      {/* Dot on Central Line */}
+                      {!isLast && (
+                        <div className="pointer-events-none absolute left-5 top-1/4 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-[2.5px] border-white bg-brand-primary shadow-[0_0_0_5px_rgba(83,170,161,0.12)] transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-accent lg:left-1/2 lg:z-10" />
+                      )}
+
+                      {isLast && (
+                        <div className="pointer-events-none absolute left-5 top-[26%] h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-white bg-brand-primary shadow-[0_0_0_6px_rgba(83,170,161,0.12)] lg:left-1/2 lg:z-10" />
+                      )}
+
+                      {/* Curve Connector (Desktop Only) */}
+                      {!isLast && (
+                        <div
+                          className={`pointer-events-none absolute top-1/4 hidden h-16 w-20 -translate-y-1/2 lg:block ${isRight ? "left-1/2" : "right-1/2 mr-[-1px]"}`}
+                        >
+                          <svg
+                            width="100%"
+                            height="100%"
+                            viewBox="0 0 80 64"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="text-brand-primary/30"
+                          >
+                            <path
+                              d={
+                                isRight
+                                  ? "M 0,0 C 32,0 48,32 80,32"
+                                  : "M 80,0 C 48,0 32,32 0,32"
+                              }
+                              stroke="currentColor"
+                              strokeWidth="1"
+                              strokeDasharray="3 4"
+                              strokeLinecap="round"
+                            />
+                          </svg>
+                        </div>
+                      )}
+
+                      {/* Content Row */}
+                      <div className={`flex pl-12 sm:pl-16 lg:pl-0 ${desktopAlign}`}>
+                        <article className={cardClass}>
+                          {/* Dot on Card Edge */}
+                          {!isLast && (
+                            <div
+                              className={`absolute top-1/2 h-2.5 w-2.5 -translate-y-1/2 rounded-full bg-brand-primary shadow-[0_0_0_3px_white,0_0_0_6px_rgba(83,170,161,0.13)] transition-all duration-500 group-hover:scale-125 group-hover:bg-brand-accent ${isRight ? "left-0 -translate-x-1/2" : "right-0 translate-x-1/2"}`}
+                            />
+                          )}
+
+                          <div className="space-y-3">
+                            <span className="inline-flex rounded-full border border-brand-primary/15 bg-brand-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-primary-strong">
+                              Tahap {String(index + 1).padStart(2, "0")}
+                            </span>
+                            <p className="font-mono text-lg font-bold leading-tight tracking-tight text-brand-dark sm:text-xl xl:text-[1.65rem]">
+                              {item.date}
+                            </p>
+                            <h3 className="text-xl font-bold leading-tight text-foreground sm:text-2xl xl:text-[1.95rem]">
+                              {item.title}
+                            </h3>
+                          </div>
+                        </article>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-brand-navy">{item}</h3>
-                      <p className="mt-1 text-sm text-slate-500">Tahap perjalanan INACOMP 2.0</p>
-                    </div>
-                  </div>
-                </article>
-              ))}
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
@@ -386,25 +552,32 @@ export default function Home() {
         <section id="galeri" className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl space-y-10">
             <div className="max-w-3xl space-y-4">
-              <span className="inline-flex rounded-full border border-border bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-indigo">
+              <span className="inline-flex rounded-full border border-border bg-white/72 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary-strong">
                 Galeri INACOMP 1.0
               </span>
-              <h2 className="font-mono text-3xl font-bold leading-tight text-brand-navy sm:text-4xl lg:text-5xl">
+              <h2 className="font-mono text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
                 Sekilas dokumentasi dari penyelenggaraan INACOMP sebelumnya.
               </h2>
-              <p className="text-base leading-8 text-slate-600 sm:text-lg">
-                Area ini menampilkan placeholder dokumentasi sebagai gambaran atmosfer
-                kompetisi sebelumnya tanpa menggunakan aset final.
+              <p className="text-base leading-8 text-muted sm:text-lg">
+                Dokumentasi momen-momen berharga dari penyelenggaraan INACOMP
+                sebelumnya yang penuh antusiasme dan inovasi.
               </p>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {galleryHeights.map((heightClass, index) => (
+              {galleryImages.map((image, index) => (
                 <div
-                  key={heightClass + index}
-                  className={`overflow-hidden rounded-[1.75rem] border border-white/80 bg-white/85 p-3 shadow-soft ${heightClass}`}
+                  key={image.src + index}
+                  className={`relative overflow-hidden rounded-[1.75rem] border border-white/80 bg-white/76 p-3 shadow-soft backdrop-blur-sm ${image.heightClass}`}
                 >
-                  <div className="h-full rounded-[1.25rem] bg-[linear-gradient(180deg,_rgba(54,92,255,0.08),_rgba(67,199,255,0.16))]" />
+                  <div className="relative h-full w-full overflow-hidden rounded-[1.25rem]">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
@@ -414,13 +587,13 @@ export default function Home() {
         <section id="faq" className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
             <div className="space-y-4">
-              <span className="inline-flex rounded-full border border-border bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-indigo">
+              <span className="inline-flex rounded-full border border-border bg-white/72 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary-strong">
                 FAQ Umum
               </span>
-              <h2 className="font-mono text-3xl font-bold leading-tight text-brand-navy sm:text-4xl lg:text-5xl">
+              <h2 className="font-mono text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
                 Pertanyaan yang paling sering ditanyakan calon peserta.
               </h2>
-              <p className="text-base leading-8 text-slate-600 sm:text-lg">
+              <p className="text-base leading-8 text-muted sm:text-lg">
                 Informasi dasar dirangkum agar peserta bisa memahami alur partisipasi
                 sebelum berpindah ke detail masing-masing cabang lomba.
               </p>
@@ -430,7 +603,7 @@ export default function Home() {
         </section>
 
         <section id="guidebook" className="px-4 py-20 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] border border-white/80 bg-brand-navy px-6 py-10 text-white shadow-soft sm:px-8 sm:py-12 lg:px-12 lg:py-14">
+          <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] border border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(83,170,161,0.18),_transparent_24%),radial-gradient(circle_at_bottom_right,_rgba(45,73,93,0.24),_transparent_28%),linear-gradient(135deg,_#22464C,_#2D495D_60%,_#53AAA1_125%)] px-6 py-10 text-white shadow-soft sm:px-8 sm:py-12 lg:px-12 lg:py-14">
             <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-center">
               <div className="space-y-5">
                 <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white/80">
@@ -446,7 +619,7 @@ export default function Home() {
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <a
                     href="#"
-                    className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-brand-navy hover:bg-blue-50 sm:text-base"
+                    className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-brand-dark hover:bg-white/90 sm:text-base"
                   >
                     Download Guidebook CP
                   </a>
@@ -459,11 +632,21 @@ export default function Home() {
                 </div>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
-                <div className="rounded-[1.75rem] border border-white/15 bg-white/8 p-4">
-                  <div className="h-52 rounded-[1.5rem] bg-white/10" />
+                <div className="relative aspect-[3/4] overflow-hidden rounded-[1.75rem] border border-white/15 bg-white/8 p-3 backdrop-blur-sm transition-transform duration-500 hover:scale-[1.02]">
+                  <Image
+                    src="/assets/booklet-cp.jpg"
+                    alt="Guidebook Competitive Programming"
+                    fill
+                    className="rounded-[1.25rem] object-cover"
+                  />
                 </div>
-                <div className="rounded-[1.75rem] border border-white/15 bg-white/8 p-4 sm:translate-y-10">
-                  <div className="h-52 rounded-[1.5rem] bg-white/10" />
+                <div className="relative aspect-[3/4] overflow-hidden rounded-[1.75rem] border border-white/15 bg-white/8 p-3 backdrop-blur-sm transition-transform duration-500 hover:scale-[1.02] sm:translate-y-10">
+                  <Image
+                    src="/assets/booklet-cisco.jpg"
+                    alt="Guidebook Cisco Networking"
+                    fill
+                    className="rounded-[1.25rem] object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -471,27 +654,27 @@ export default function Home() {
         </section>
 
         <section id="closing-cta" className="px-4 pb-20 pt-6 sm:px-6 lg:px-8 lg:pb-28">
-          <div className="mx-auto max-w-5xl rounded-[2.25rem] border border-white/80 bg-white/85 px-6 py-10 text-center shadow-soft backdrop-blur-sm sm:px-8 sm:py-12 lg:px-14">
-            <span className="inline-flex rounded-full border border-border bg-blue-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-indigo">
+          <div className="mx-auto max-w-5xl rounded-[2.25rem] border border-white/80 bg-white/78 px-6 py-10 text-center shadow-soft backdrop-blur-sm sm:px-8 sm:py-12 lg:px-14">
+            <span className="inline-flex rounded-full border border-border bg-brand-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary-strong">
               Closing CTA
             </span>
-            <h2 className="mt-5 font-mono text-3xl font-bold leading-tight text-brand-navy sm:text-4xl lg:text-5xl">
+            <h2 className="mt-5 font-mono text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
               Saatnya pilih cabang lomba, siapkan guidebook, dan jadi bagian dari INACOMP 2.0.
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-muted sm:text-lg">
               Masuk ke cabang yang paling sesuai dengan minatmu dan mulai persiapan
               dari sekarang untuk tampil maksimal di kompetisi nasional ini.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <a
                 href="#cabang-lomba"
-                className="inline-flex items-center justify-center rounded-full bg-brand-indigo px-6 py-3.5 text-sm font-semibold text-white hover:bg-brand-navy sm:text-base"
+                className="inline-flex items-center justify-center rounded-full bg-brand-primary px-6 py-3.5 text-sm font-semibold text-white hover:bg-brand-primary-strong sm:text-base"
               >
                 Pilih Cabang Lomba
               </a>
               <a
                 href="#guidebook"
-                className="inline-flex items-center justify-center rounded-full border border-border bg-white px-6 py-3.5 text-sm font-semibold text-brand-navy hover:border-brand-sky hover:text-brand-indigo sm:text-base"
+                className="inline-flex items-center justify-center rounded-full border border-border bg-white px-6 py-3.5 text-sm font-semibold text-brand-dark hover:border-brand-primary hover:text-brand-dark sm:text-base"
               >
                 Lihat Guidebook
               </a>
