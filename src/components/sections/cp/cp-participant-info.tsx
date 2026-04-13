@@ -26,8 +26,8 @@ export function CPParticipantInfo() {
         <div className="space-y-8">
           <SectionHeading
             eyebrow="Informasi Peserta"
-            title="Informasi inti peserta dirangkum singkat dan langsung ke poin penting."
-            description="Section ini dibuat ringkas agar peserta dapat memahami siapa yang dapat mengikuti lomba dan bagaimana format tim Competitive Programming di INACOMP 2.0."
+            title="Siapa yang bisa ikut dan bagaimana format timnya?"
+            description="Competitive Programming INACOMP 2.0 terbuka untuk siswa/i SMA/SMK/sederajat dari seluruh Indonesia dengan format maksimal 2 orang per tim."
           />
 
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">

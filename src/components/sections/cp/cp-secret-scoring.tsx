@@ -24,10 +24,10 @@ export function CPSecretScoring() {
                   Mekanisme Penilaian
                 </p>
                 <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-                  Informasi penilaian disimpan sebagai secure contest information.
+                  Mekanisme penilaian dijaga tetap rahasia hingga hari kompetisi.
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-white/78 sm:text-base">
-                  Detail mekanisme penilaian tidak dipublikasikan di halaman ini. Penyelenggara menjaga informasi tersebut tetap rahasia agar proses kompetisi tetap terstruktur dan adil.
+                  Detail sistem penilaian tidak diumumkan sebelumnya. Penyelenggara menjaga informasi ini agar proses kompetisi tetap adil dan terstruktur bagi semua peserta.
                 </p>
               </div>
             </div>

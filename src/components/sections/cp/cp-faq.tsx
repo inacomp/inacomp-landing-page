@@ -6,27 +6,27 @@ const faqItems = [
   {
     question: "Siapa yang bisa mengikuti lomba ini?",
     answer:
-      "Lomba ini tersedia untuk siswa/i SMA/SMK/sederajat yang ingin mengikuti cabang Competitive Programming INACOMP 2.0.",
+      "Siswa/i SMA/SMK/sederajat dari seluruh Indonesia yang ingin berkompetisi di cabang Competitive Programming INACOMP 2.0.",
   },
   {
     question: "Berapa maksimal anggota tim?",
     answer:
-      "Setiap tim terdiri dari maksimal 2 orang. Peserta dapat mengikuti kompetisi sesuai format tim yang ditetapkan panitia.",
+      "Maksimal 2 orang per tim.",
   },
   {
     question: "Apakah materi akan diumumkan?",
     answer:
-      "Tidak. Materi atau topik yang diujikan bersifat rahasia dan tidak dipublikasikan pada halaman ini.",
+      "Tidak. Topik yang diujikan tidak dibocorkan sebelumnya agar kompetisi tetap adil bagi semua peserta.",
   },
   {
     question: "Apakah mekanisme penilaian dipublikasikan?",
     answer:
-      "Tidak. Mekanisme penilaian bersifat rahasia dan tidak menampilkan detail scoring maupun penjurian pada landing page.",
+      "Tidak. Detail sistem penilaian bersifat rahasia dan tidak diumumkan di halaman ini.",
   },
   {
     question: "Kapan detail teknis akan diberikan?",
     answer:
-      "Detail teknis lengkap akan dijelaskan lebih lanjut melalui guidebook dan technical meeting resmi dari panitia.",
+      "Detail teknis lengkap akan disampaikan melalui guidebook dan technical meeting resmi dari panitia.",
   },
 ];
 
@@ -37,8 +37,8 @@ export function CPFaq() {
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <SectionHeading
             eyebrow="FAQ"
-            title="Jawaban cepat untuk pertanyaan yang paling sering ditanyakan peserta."
-            description="Disusun singkat agar mudah dipindai, terutama untuk informasi peserta, format tim, kerahasiaan materi, dan waktu pembagian detail teknis."
+            title="Pertanyaan yang sering muncul seputar Competitive Programming."
+            description="Jawaban singkat untuk pertanyaan umum — format tim, kerahasiaan materi, dan cara mendapatkan informasi teknis lebih lanjut."
           />
           <Accordion items={faqItems} />
         </div>

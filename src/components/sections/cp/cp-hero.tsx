@@ -15,7 +15,7 @@ export function CPHero() {
                 Competitive Programming
               </h1>
               <p className="max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                Cabang Competitive Programming dirancang untuk siswa/i SMA/SMK/sederajat yang ingin menguji logika, ketelitian, dan kemampuan kolaborasi dalam format lomba yang clean, technical, dan contest-oriented.
+                Lomba pemrograman untuk siswa/i SMA/SMK yang mau menantang diri — selesaikan soal algoritma, adu kecepatan, dan buktikan solusimu bersama tim.
               </p>
             </div>
 

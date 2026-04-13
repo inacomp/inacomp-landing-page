@@ -23,8 +23,8 @@ export function CPAbout() {
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeading
             eyebrow="Tentang Lomba"
-            title="Ruang kompetitif untuk mengasah ketelitian berpikir dan kualitas eksekusi solusi."
-            description="Competitive Programming di INACOMP 2.0 berfokus pada cara peserta membaca persoalan, mengolah logika, menentukan strategi, lalu mengeksekusi solusi secara efisien bersama tim."
+            title="Bukan sekadar lomba coding — ini tentang seberapa cepat kamu bisa berpikir dan mengeksekusi."
+            description="Di Competitive Programming INACOMP 2.0, kamu dan timmu akan dihadapkan pada soal-soal algoritmik yang menuntut logika tajam, strategi yang tepat, dan eksekusi yang efisien."
           />
 
           <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">

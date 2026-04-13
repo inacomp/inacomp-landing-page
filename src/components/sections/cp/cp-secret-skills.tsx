@@ -24,10 +24,10 @@ export function CPSecretSkills() {
                   Skill yang Dinilai
                 </p>
                 <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-                  Informasi skill penilaian Competitive Programming bersifat rahasia.
+                  Skill yang dinilai tidak dipublikasikan — biarkan kompetisi berbicara.
                 </h2>
                 <p className="mt-4 text-sm leading-7 text-white/78 sm:text-base">
-                  Halaman ini tidak mempublikasikan indikator skill yang dinilai secara rinci. Informasi tersebut dijaga tetap terbatas agar pengalaman kompetisi tetap objektif dan profesional.
+                  Indikator penilaian dijaga tetap tertutup agar setiap tim bersaing murni berdasarkan kemampuan, bukan persiapan yang diarahkan oleh bocoran kriteria.
                 </p>
               </div>
             </div>

@@ -15,11 +15,7 @@ export function CiscoHero() {
                 Cisco Networking Competition
               </h1>
               <p className="max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                Cabang Cisco Networking dirancang untuk siswa/i
-                SMA/SMK/sederajat yang tertarik pada jaringan komputer,
-                troubleshooting, dan kesiapan menghadapi tantangan infrastruktur
-                digital modern. Kompetisi diikuti maksimal 2 orang per tim dan pada
-                babak final terdapat sesi presentasi.
+                Lomba jaringan komputer untuk siswa/i SMA/SMK yang punya minat di bidang networking — konfigurasi, troubleshooting, dan presentasi solusi di hadapan juri pada babak final.
               </p>
             </div>
 

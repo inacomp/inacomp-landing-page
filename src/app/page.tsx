@@ -8,25 +8,25 @@ const aboutHighlights = [
     title: "Edisi Kedua",
     icon: "sparkles",
     description:
-      "INACOMP 2.0 hadir sebagai lanjutan kompetisi informatika yang semakin matang dan relevan.",
+      "Edisi kedua yang hadir lebih matang, dengan format yang lebih terarah.",
   },
   {
     title: "Diselenggarakan BEM PTIK UNJ",
     icon: "school",
     description:
-      "Dikurasi oleh Badan Eksekutif Mahasiswa PTIK Universitas Negeri Jakarta.",
+      "Digelar oleh BEM Prodi Pendidikan Teknik Informatika dan Komputer UNJ.",
   },
   {
     title: "Untuk Siswa/i SMA/SMK",
     icon: "users",
     description:
-      "Dirancang untuk peserta sederajat yang ingin bertanding, belajar, dan berkembang.",
+      "Terbuka untuk siswa/i SMA/SMK/sederajat dari seluruh Indonesia.",
   },
   {
     title: "Fokus Teknologi",
     icon: "cpu",
     description:
-      "Mengangkat dua ranah utama: pemrograman komputer dan jaringan komputer.",
+      "Dua cabang lomba: Competitive Programming dan Cisco Networking.",
   },
 ];
 
@@ -38,7 +38,7 @@ const tracks = [
     badgeClass: "bg-brand-primary text-white",
     buttonClass: "bg-brand-primary text-white hover:bg-brand-primary-strong",
     description:
-      "Untuk siswa yang ingin menguji logika, algoritma, dan ketelitian problem solving dalam atmosfer kompetisi yang cepat dan menantang.",
+      "Uji logika dan kemampuan problem solving lewat soal-soal algoritma yang menantang waktu.",
     points: ["Algoritma & logika", "Format kompetitif", "Cocok untuk problem solver"],
     image: "/assets/booklet-cp.jpg"
   },
@@ -49,7 +49,7 @@ const tracks = [
     badgeClass: "bg-brand-dark text-white",
     buttonClass: "bg-brand-dark text-white hover:bg-brand-accent",
     description:
-      "Untuk peserta yang tertarik pada jaringan komputer, troubleshooting, dan pemahaman infrastruktur digital yang aplikatif.",
+      "Tes pemahaman jaringan komputer, troubleshooting, dan konfigurasi infrastruktur digital.",
     points: ["Networking fundamentals", "Cisco-oriented", "Hands-on problem mindset"],
     image: "/assets/booklet-cisco.jpg"
 
@@ -87,27 +87,27 @@ const faqItems = [
   {
     question: "Siapa yang bisa mengikuti INACOMP?",
     answer:
-      "INACOMP 2.0 ditujukan untuk siswa/i SMA/SMK/sederajat dari seluruh Indonesia yang memiliki minat pada bidang pemrograman komputer maupun jaringan komputer.",
+      "Siswa/i SMA/SMK/sederajat dari seluruh Indonesia yang punya minat di bidang pemrograman komputer atau jaringan komputer.",
   },
   {
     question: "Apakah lomba dilaksanakan secara tim?",
     answer:
-      "Skema partisipasi akan dijelaskan pada detail masing-masing cabang lomba. Silakan cek halaman cabang lomba dan guidebook resmi untuk format terbaru.",
+      "Format per cabang berbeda. Cek halaman cabang lomba atau guidebook resmi untuk detailnya.",
   },
   {
     question: "Bagaimana cara mendapatkan guidebook?",
     answer:
-      "Guidebook dapat diakses melalui tombol Download Guidebook pada kartu cabang lomba maupun pada section download khusus di bagian bawah halaman ini.",
+      "Ada tombol Download Guidebook di halaman ini dan di masing-masing halaman cabang lomba.",
   },
   {
     question: "Apa saja cabang lomba yang tersedia?",
     answer:
-      "INACOMP 2.0 memiliki dua cabang lomba utama, yaitu Competitive Programming dan Cisco Networking.",
+      "INACOMP 2.0 membuka dua cabang lomba: Competitive Programming dan Cisco Networking.",
   },
   {
     question: "Kapan informasi teknis diumumkan?",
     answer:
-      "Informasi teknis seperti timeline detail, technical meeting, dan ketentuan lomba akan diumumkan melalui kanal resmi INACOMP 2.0 setelah registrasi dibuka.",
+      "Setelah registrasi dibuka, info teknis lengkap akan disampaikan lewat kanal resmi INACOMP 2.0.",
   },
 ];
 
@@ -329,13 +329,10 @@ export default function Home() {
                 Tentang INACOMP
               </span>
               <h2 className="font-mono text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
-                Kompetisi nasional yang mempertemukan semangat belajar, bertanding, dan berkembang.
+                Kompetisi teknologi nasional untuk siswa/i SMA/SMK yang siap unjuk kemampuan.
               </h2>
               <p className="text-base leading-8 text-muted sm:text-lg">
-                INACOMP 2.0 adalah edisi kedua dari Informatics National Competition.
-                Event ini dirancang sebagai ruang bagi siswa/i SMA/SMK/sederajat untuk
-                menunjukkan kemampuan di bidang pemrograman komputer dan jaringan
-                komputer dalam atmosfer yang kompetitif, rapi, dan profesional.
+                INACOMP 2.0 adalah edisi kedua dari Informatics National Competition — ajang tahunan yang membuka ruang bagi siswa/i SMA/SMK/sederajat untuk bersaing di bidang pemrograman komputer dan jaringan komputer di tingkat nasional.
               </p>
             </div>
 
@@ -365,11 +362,10 @@ export default function Home() {
                 Cabang Lomba
               </span>
               <h2 className="font-mono text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
-                Pilih jalur kompetisi yang paling sesuai dengan kekuatanmu.
+                Dua cabang lomba, satu kompetisi — pilih yang paling sesuai minatmu.
               </h2>
               <p className="text-base leading-8 text-muted sm:text-lg">
-                Dua cabang lomba utama disiapkan untuk peserta dengan minat yang berbeda,
-                namun tetap berada dalam satu ekosistem kompetisi teknologi yang solid.
+                Competitive Programming untuk yang suka algoritma, Cisco Networking untuk yang tertarik di dunia jaringan. Keduanya berskala nasional, keduanya menantang.
               </p>
             </div>
 
@@ -447,11 +443,10 @@ export default function Home() {
                 Timeline
               </span>
               <h2 className="font-mono text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
-                Alur kompetisi tampil lebih tegas dalam satu garis perjalanan utama.
+                Dari pendaftaran sampai grand final — ini jadwal lengkap INACOMP 2.0.
               </h2>
               <p className="text-base leading-8 text-muted sm:text-lg">
-                Setiap milestone disusun berurutan pada poros vertikal agar tanggal penting,
-                tahapan lomba, dan transisi menuju final terasa lebih jelas dalam sekali lihat.
+                Catat tanggalnya, siapkan timmu, dan pastikan tidak ada satu tahapan pun yang terlewat.
               </p>
             </div>
 
@@ -556,11 +551,10 @@ export default function Home() {
                 Galeri INACOMP 1.0
               </span>
               <h2 className="font-mono text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
-                Sekilas dokumentasi dari penyelenggaraan INACOMP sebelumnya.
+                Begini suasana INACOMP tahun lalu.
               </h2>
               <p className="text-base leading-8 text-muted sm:text-lg">
-                Dokumentasi momen-momen berharga dari penyelenggaraan INACOMP
-                sebelumnya yang penuh antusiasme dan inovasi.
+                Sekilas momen dari INACOMP 1.0 — dari sesi kompetisi sampai pengumuman juara.
               </p>
             </div>
 
@@ -591,11 +585,10 @@ export default function Home() {
                 FAQ Umum
               </span>
               <h2 className="font-mono text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
-                Pertanyaan yang paling sering ditanyakan calon peserta.
+                Ada yang ingin kamu tanyakan sebelum daftar?
               </h2>
               <p className="text-base leading-8 text-muted sm:text-lg">
-                Informasi dasar dirangkum agar peserta bisa memahami alur partisipasi
-                sebelum berpindah ke detail masing-masing cabang lomba.
+                Beberapa pertanyaan yang sering muncul — jawaban singkat, langsung ke poinnya.
               </p>
             </div>
             <FaqAccordion items={faqItems} />
@@ -610,11 +603,10 @@ export default function Home() {
                   Download Guidebook
                 </span>
                 <h2 className="font-mono text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-                  Unduh guidebook dan siapkan strategi terbaikmu dari sekarang.
+                  Unduh guidebook dan mulai persiapanmu dari sekarang.
                 </h2>
                 <p className="max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
-                  Akses panduan resmi masing-masing cabang untuk memahami alur,
-                  ketentuan, dan persiapan sebelum pendaftaran dibuka sepenuhnya.
+                  Semua yang perlu kamu tahu — alur kompetisi, ketentuan peserta, dan informasi teknis — ada di guidebook masing-masing cabang.
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <a

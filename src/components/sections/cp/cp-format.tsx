@@ -23,8 +23,8 @@ export function CPFormat() {
         <div className="surface-card p-6 sm:p-8 lg:p-10">
           <SectionHeading
             eyebrow="Format Kompetisi"
-            title="Disusun terarah, tidak bertele-tele, dan tetap memberi ruang untuk detail teknis di guidebook."
-            description="Informasi pada halaman ini sengaja ditampilkan secara high-level. Penjelasan lengkap mengenai alur dan pelaksanaan kompetisi akan diberikan lebih lanjut pada guidebook dan technical meeting."
+            title="Kompetisi tim, soal algoritmik, dan waktu yang terus berjalan."
+            description="Gambaran umum format Competitive Programming INACOMP 2.0. Detail teknis lengkap — termasuk alur babak dan aturan submission — akan tersedia di guidebook dan technical meeting."
           />
 
           <div className="mt-8 grid gap-4 lg:grid-cols-3">
