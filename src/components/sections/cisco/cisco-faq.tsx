@@ -37,8 +37,8 @@ export function CiscoFaq() {
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <SectionHeading
             eyebrow="FAQ"
-            title="Jawaban cepat untuk pertanyaan yang paling sering ditanyakan calon peserta Cisco Networking."
-            description="FAQ ini dirancang singkat dan langsung ke poin penting agar peserta mudah memahami format tim, final presentation, kerahasiaan topik, dan distribusi informasi teknis."
+            title="FAQ Cisco Networking Competition untuk calon peserta SMA/SMK."
+            description="FAQ ini merangkum poin penting seputar format tim maksimal 2 orang, final presentation, kerahasiaan topik, dan alur informasi teknis agar peserta lebih siap mengikuti kompetisi."
           />
           <Accordion items={faqItems} />
         </div>

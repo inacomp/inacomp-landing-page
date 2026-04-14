@@ -26,8 +26,8 @@ export function CiscoAbout() {
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeading
             eyebrow="Tentang Lomba"
-            title="Kompetisi yang menguji pemahaman dan kesiapan menghadapi tantangan jaringan komputer secara profesional."
-            description="Cisco Networking di INACOMP 2.0 ditujukan untuk siswa/i yang ingin mengembangkan kapasitas di bidang jaringan komputer melalui pengalaman kompetitif yang modern, rapi, dan tetap ramah untuk peserta pelajar."
+            title="Kompetisi jaringan komputer nasional untuk pelajar yang ingin serius di bidang networking."
+            description="Cisco Networking di INACOMP 2.0 dirancang untuk siswa/i SMA/SMK/sederajat yang ingin menunjukkan pemahaman jaringan komputer, ketelitian teknis, dan kesiapan presentasi dalam format kompetisi yang profesional."
           />
 
           <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">

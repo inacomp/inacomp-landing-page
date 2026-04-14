@@ -17,8 +17,8 @@ export function CPSecretTopics() {
         <div className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
           <SectionHeading
             eyebrow="Materi / Topik"
-            title="Topik yang diujikan tidak diumumkan sebelumnya."
-            description="Agar semua peserta berangkat dari titik yang sama, materi kompetisi tidak dibocorkan di landing page. Informasi teknis yang diperlukan akan disampaikan melalui kanal resmi."
+            title="Topik lomba algoritma disimpan rahasia hingga kompetisi dimulai."
+            description="Materi Competitive Programming INACOMP 2.0 tidak diumumkan sebelumnya agar setiap peserta menghadapi tantangan yang sama. Informasi teknis yang perlu diketahui peserta akan dibagikan melalui kanal resmi panitia."
           />
 
           <div className="surface-card relative overflow-hidden p-6 sm:p-8 group">

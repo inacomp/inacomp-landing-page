@@ -12,10 +12,10 @@ export function CiscoHero() {
 
             <div className="space-y-5">
               <h1 className="text-balance max-w-3xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-                Cisco Networking Competition
+                Cisco Networking Competition INACOMP 2.0
               </h1>
               <p className="max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                Lomba jaringan komputer untuk siswa/i SMA/SMK yang punya minat di bidang networking — konfigurasi, troubleshooting, dan presentasi solusi di hadapan juri pada babak final.
+                Lomba Cisco Networking untuk siswa/i SMA/SMK/sederajat yang ingin mengasah kemampuan jaringan komputer melalui konfigurasi, troubleshooting, dan final presentation di tingkat nasional.
               </p>
             </div>
 

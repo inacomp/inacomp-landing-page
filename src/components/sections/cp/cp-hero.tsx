@@ -12,10 +12,10 @@ export function CPHero() {
 
             <div className="space-y-5">
               <h1 className="text-balance max-w-3xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-                Competitive Programming
+                Competitive Programming INACOMP 2.0
               </h1>
               <p className="max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                Lomba pemrograman untuk siswa/i SMA/SMK yang mau menantang diri — selesaikan soal algoritma, adu kecepatan, dan buktikan solusimu bersama tim.
+                Lomba competitive programming INACOMP 2.0 untuk siswa/i SMA/SMK/sederajat yang ingin menguji logika, algoritma, dan problem solving dalam kompetisi coding siswa tingkat nasional.
               </p>
             </div>
 

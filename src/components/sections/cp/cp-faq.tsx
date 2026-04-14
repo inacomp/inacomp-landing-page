@@ -37,8 +37,8 @@ export function CPFaq() {
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <SectionHeading
             eyebrow="FAQ"
-            title="Pertanyaan yang sering muncul seputar Competitive Programming."
-            description="Jawaban singkat untuk pertanyaan umum — format tim, kerahasiaan materi, dan cara mendapatkan informasi teknis lebih lanjut."
+            title="FAQ Competitive Programming INACOMP 2.0 untuk peserta SMA/SMK."
+            description="Jawaban singkat untuk pertanyaan umum seputar kompetisi coding siswa ini, mulai dari format tim, kerahasiaan materi, hingga akses informasi teknis resmi."
           />
           <Accordion items={faqItems} />
         </div>
