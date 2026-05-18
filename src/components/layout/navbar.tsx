@@ -1,37 +1,41 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MobileNavMenu } from "@/components/layout/mobile-nav-menu";
 import { Container } from "@/components/ui/container";
-import Image from "next/image";
 
 const navLinks = [
-	{ href: "/#tentang", label: "Tentang" },
-	{ href: "/#cabang-lomba", label: "Cabang" },
+	{ href: "/#tracks", label: "Cabang" },
+	{ href: "/#timeline", label: "Timeline" },
+	{ href: "/#faq", label: "FAQ" },
 	{ href: "/competitive-programming", label: "Competitive Programming" },
-	{ href: "/cisco-networking", label: "Cisco Networking" },
+	{ href: "/ui-ux-design", label: "UI/UX Design" },
 ];
 
 export function Navbar() {
 	return (
-		<header className="sticky top-0 z-50 border-b border-white/40 bg-white/60 backdrop-blur-xl supports-[backdrop-filter]:bg-white/50">
+		<header className="sticky top-0 z-50 px-3 pt-3 sm:px-4">
 			<Container>
-				<div className="flex min-h-18 flex-wrap items-center justify-between gap-4 py-4">
+				<div className="flex min-h-18 flex-wrap items-center justify-between gap-4 rounded-full border border-slate-200/90 bg-white/88 px-4 py-3 shadow-[0_12px_28px_rgba(15,23,42,0.08)] backdrop-blur-md sm:px-5">
 					<Link href="/" className="group flex items-center gap-4">
-						<div className="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl shadow-soft transition-transform group-hover:scale-105">
+						<div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-[14px] border border-slate-200 bg-slate-50 transition-transform group-hover:scale-[1.03]">
 							<Image
 								src="/favicon/android-chrome-512x512.png"
 								alt="Inacomp Logo"
 								fill
-								className="object-contain p-1"
+								className="object-contain p-1.5"
 							/>
 						</div>
-						<div>
-							<span className="block text-xl font-extrabold tracking-wider text-foreground uppercase">
+						<div className="space-y-0.5">
+							<span className="block text-base font-semibold tracking-[0.18em] text-foreground uppercase">
 								INACOMP 2.0
+							</span>
+							<span className="hidden text-xs uppercase tracking-[0.18em] text-muted md:block">
+								Informatics National Competition
 							</span>
 						</div>
 					</Link>
 
-					<nav className="hidden items-center gap-7 lg:flex">
+					<nav className="hidden items-center gap-6 lg:flex">
 						{navLinks.map((link) => (
 							<Link
 								key={link.label}
@@ -45,10 +49,10 @@ export function Navbar() {
 
 					<div className="hidden lg:block">
 						<Link
-							href="/cisco-networking#daftar"
-							className="inline-flex h-11 items-center justify-center rounded-full bg-brand-primary px-5 text-sm font-semibold text-white shadow-soft hover:bg-brand-primary-strong"
+							href="/#tracks"
+							className="primary-button px-5 py-2.5 text-sm"
 						>
-							Daftar
+							Lihat Cabang
 						</Link>
 					</div>
 

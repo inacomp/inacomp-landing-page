@@ -425,14 +425,14 @@ Informatics National Competition
 Informatics National Competition (INACOMP) merupakan kompetisi yang berfokus pada bidang pemrograman komputer dan jaringan komputer. Diselenggarakan oleh Badan Eksekutif Mahasiswa Prodi Pendidikan Teknik Informatika dan Komputer Universitas Negeri Jakarta, kompetisi ini diselenggarakan nasional dan ditujukan kepada siswa/i SMA/SMK/sederajat.
 
 Daftar Sekarang
-Lihat Cabang Lomba
+Lihat Divisi Lomba
 We're Back
 
 INACOMP 2.0
 
 Bright Mode
 INACOMP Logo
-Cabang Lomba
+Divisi Lomba
 
 Competitive Programming
 Cisco Networking
@@ -456,9 +456,9 @@ Dirancang untuk peserta sederajat yang ingin bertanding, belajar, dan berkembang
 Fokus Teknologi
 Mengangkat dua ranah utama: pemrograman komputer dan jaringan komputer.
 
-Cabang Lomba
+Divisi Lomba
 Pilih jalur kompetisi yang paling sesuai dengan kekuatanmu.
-Dua cabang lomba utama disiapkan untuk peserta dengan minat yang berbeda, namun tetap berada dalam satu ekosistem kompetisi teknologi yang solid.
+Dua divisi lomba utama disiapkan untuk peserta dengan minat yang berbeda, namun tetap berada dalam satu ekosistem kompetisi teknologi yang solid.
 
 INACOMP Track
 
@@ -528,7 +528,7 @@ Gallery 6
 Gallery 7
 FAQ Umum
 Pertanyaan yang paling sering ditanyakan calon peserta.
-Informasi dasar dirangkum agar peserta bisa memahami alur partisipasi sebelum berpindah ke detail masing-masing cabang lomba.
+Informasi dasar dirangkum agar peserta bisa memahami alur partisipasi sebelum berpindah ke detail masing-masing divisi lomba.
 
 
 Siapa yang bisa mengikuti INACOMP?
@@ -538,7 +538,7 @@ Apakah lomba dilaksanakan secara tim?
 
 Bagaimana cara mendapatkan guidebook?
 
-Apa saja cabang lomba yang tersedia?
+Apa saja divisi lomba yang tersedia?
 
 Kapan informasi teknis diumumkan?
 Download Guidebook
@@ -550,10 +550,10 @@ Download Guidebook Cisco Networking
 Guidebook Competitive Programming
 Guidebook Cisco Networking
 Closing CTA
-Saatnya pilih cabang lomba, siapkan guidebook, dan jadi bagian dari INACOMP 2.0.
+Saatnya pilih divisi lomba, siapkan guidebook, dan jadi bagian dari INACOMP 2.0.
 Masuk ke cabang yang paling sesuai dengan minatmu dan mulai persiapan dari sekarang untuk tampil maksimal di kompetisi nasional ini.
 
-Pilih Cabang Lomba
+Pilih Divisi Lomba
 Lihat Guidebook
 
 INACOMP 2.0

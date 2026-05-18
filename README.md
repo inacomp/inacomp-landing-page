@@ -111,7 +111,7 @@ Penting:
 
 - Jangan membuat style yang berbeda jauh antar halaman
 - Semua halaman harus terasa satu website / satu brand
-- Yang berbeda hanya penekanan visual sesuai cabang lomba
+- Yang berbeda hanya penekanan visual sesuai divisi lomba
 - Gunakan skeleton untuk seluruh image area
 - Jika ada section galeri, tampilkan dalam bentuk placeholder cards/skeleton
   gallery

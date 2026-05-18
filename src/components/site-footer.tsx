@@ -1,6 +1,6 @@
 const footerNavigation = [
   { label: "Tentang", href: "#tentang" },
-  { label: "Cabang Lomba", href: "#cabang-lomba" },
+  { label: "Divisi Lomba", href: "#cabang-lomba" },
   { label: "Timeline", href: "#timeline" },
   { label: "FAQ", href: "#faq" },
 ];

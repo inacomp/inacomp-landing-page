@@ -28,32 +28,31 @@ export function Accordion({ items, variant = "default" }: AccordionProps) {
           <div
             key={item.question}
             className={`
-              cursor-pointer overflow-hidden transition-all duration-300
+              overflow-hidden transition-all duration-300
               ${isLanding
-                ? `rounded-[1.75rem] border backdrop-blur-sm
+                ? `rounded-[20px] border
                    ${isOpen
-                     ? "border-brand-primary/30 bg-white shadow-[0_8px_32px_rgba(34,70,76,0.1)]"
-                     : "border-border bg-white/72 shadow-soft hover:border-brand-primary/20 hover:bg-white/88 hover:shadow-[0_6px_24px_rgba(34,70,76,0.08)]"
+                     ? "border-brand-primary/40 bg-white shadow-[0_16px_36px_rgba(15,23,42,0.08)]"
+                     : "border-slate-200 bg-white hover:border-brand-primary/32 hover:shadow-[0_14px_30px_rgba(15,23,42,0.06)]"
                    }`
                 : `surface-card
-                   ${isOpen ? "ring-1 ring-brand-primary/15" : "hover:shadow-md"}`
+                   ${isOpen ? "ring-1 ring-brand-primary/18" : "hover:border-brand-primary/24"}`
               }
             `}
-            onClick={() => setOpenIndex(isOpen ? null : index)}
           >
             <button
               type="button"
               className={`
-                flex w-full items-center gap-4 text-left
+                flex w-full cursor-pointer items-center gap-4 text-left
                 ${isLanding ? "px-5 py-5 sm:px-6 sm:py-5" : "px-5 py-5 sm:px-6"}
               `}
               aria-expanded={isOpen}
-              onClick={(e) => e.stopPropagation()}
+              onClick={() => setOpenIndex(isOpen ? null : index)}
             >
               <span className={`
                 flex-1 font-semibold leading-snug transition-colors duration-200
                 ${isLanding
-                  ? `text-base sm:text-lg ${isOpen ? "text-brand-dark" : "text-brand-dark/85"}`
+                  ? `text-base sm:text-lg ${isOpen ? "text-foreground-strong" : "text-foreground"}`
                   : "text-base text-foreground sm:text-lg"
                 }
               `}>
@@ -65,11 +64,11 @@ export function Accordion({ items, variant = "default" }: AccordionProps) {
                 ${isLanding
                   ? `h-10 w-10 border
                      ${isOpen
-                       ? "border-brand-primary/30 bg-brand-primary text-white shadow-[0_4px_12px_rgba(83,170,161,0.3)]"
-                       : "border-brand-primary/15 bg-brand-primary/8 text-brand-dark"
+                       ? "border-brand-primary/30 bg-brand-soft text-brand-dark"
+                       : "border-slate-200 bg-slate-50 text-brand-dark"
                      }`
                   : `h-9 w-9 border border-border
-                     ${isOpen ? "bg-brand-primary/15 text-brand-dark" : "bg-brand-primary/8 text-brand-dark"}`
+                     ${isOpen ? "bg-brand-soft text-brand-dark" : "bg-slate-50 text-brand-dark"}`
                 }
               `}>
                 <svg

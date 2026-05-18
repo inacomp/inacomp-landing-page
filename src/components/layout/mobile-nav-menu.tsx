@@ -20,7 +20,7 @@ export function MobileNavMenu({ navLinks }: MobileNavMenuProps) {
       <button
         type="button"
         onClick={() => setIsOpen((open) => !open)}
-        className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-border bg-white/72 text-foreground backdrop-blur-sm lg:hidden"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-[14px] border border-slate-200 bg-slate-50 text-foreground hover:border-brand-primary/35 hover:bg-white lg:hidden"
         aria-expanded={isOpen}
         aria-controls="mobile-nav-menu"
         aria-label="Buka menu navigasi"
@@ -33,24 +33,27 @@ export function MobileNavMenu({ navLinks }: MobileNavMenuProps) {
       </button>
 
       {isOpen ? (
-        <div id="mobile-nav-menu" className="surface-card basis-full p-4 lg:hidden">
+        <div
+          id="mobile-nav-menu"
+          className="surface-panel basis-full p-4 lg:hidden"
+        >
           <div className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="rounded-2xl px-3 py-2 text-sm font-medium text-muted hover:bg-brand-primary/8 hover:text-brand-dark"
+                className="rounded-[14px] px-3 py-2 text-sm font-medium text-muted hover:bg-brand-soft/50 hover:text-brand-dark"
               >
                 {link.label}
               </Link>
             ))}
             <Link
-              href="/cisco-networking#daftar"
+              href="/#tracks"
               onClick={() => setIsOpen(false)}
-              className="mt-2 inline-flex h-11 items-center justify-center rounded-full bg-brand-primary px-5 text-sm font-semibold text-white hover:bg-brand-primary-strong"
+              className="primary-button mt-2"
             >
-              Daftar Sekarang
+              Lihat Cabang
             </Link>
           </div>
         </div>

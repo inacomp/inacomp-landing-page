@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const navigation = [
   { label: "Tentang", href: "#tentang" },
-  { label: "Cabang Lomba", href: "#cabang-lomba" },
+  { label: "Divisi Lomba", href: "#cabang-lomba" },
   { label: "Timeline", href: "#timeline" },
   { label: "Galeri", href: "#galeri" },
   { label: "FAQ", href: "#faq" },

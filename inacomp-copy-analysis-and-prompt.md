@@ -67,13 +67,13 @@ Saat ini beberapa bagian terasa seperti copy B2B / landing page startup internal
 ### Kekuatan
 - struktur informasinya jelas
 - value utama event sudah tersampaikan
-- timeline, cabang lomba, FAQ, dan CTA sudah lengkap
+- timeline, divisi lomba, FAQ, dan CTA sudah lengkap
 
 ### Masalah copy
 - hero masih terasa umum dan kurang “nendang”
 - bagian “Tentang INACOMP” terlalu formal
 - beberapa kalimat terdengar seperti penjelasan brosur
-- bagian cabang lomba masih aman dan generik
+- bagian divisi lomba masih aman dan generik
 - CTA belum cukup tajam
 
 ### Arah revisi

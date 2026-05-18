@@ -25,7 +25,7 @@ export function ScrollToTopButton() {
       type="button"
       onClick={scrollToTop}
       aria-label="Kembali ke atas"
-      className={`cursor-pointer fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/70 bg-brand-dark text-white shadow-soft backdrop-blur-md transition-all duration-300 hover:bg-brand-accent sm:bottom-8 sm:right-8 ${isVisible
+      className={`fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-slate-200 bg-white text-brand-dark shadow-[0_14px_28px_rgba(15,23,42,0.1)] transition-all duration-300 hover:border-brand-primary/40 hover:text-brand-primary sm:bottom-8 sm:right-8 ${isVisible
           ? "pointer-events-auto translate-y-0 opacity-100"
           : "pointer-events-none translate-y-3 opacity-0"
         }`}
