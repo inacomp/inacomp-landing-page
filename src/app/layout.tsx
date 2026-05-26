@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { ScrollToTopButton } from "@/components/ui/scroll-to-top-button";
+import {
+	absoluteUrl,
+	googleSiteVerification,
+	googleTagManagerId,
+	siteConfig,
+	siteUrlObject,
+} from "@/lib/seo";
 import "./globals.css";
 
 const inter = Inter({
@@ -18,13 +26,14 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://inacomp.vercel.app/"),
-	title: {
-		default: "INACOMP 2.0 | Informatics National Competition",
-		template: "%s | INACOMP 2.0",
-	},
-	description:
-		"Landing page resmi INACOMP 2.0, kompetisi IT nasional untuk pelajar dengan track Competitive Programming dan UI/UX Design.",
+	metadataBase: siteUrlObject,
+	title: siteConfig.defaultTitle,
+	description: siteConfig.description,
+	applicationName: siteConfig.name,
+	authors: [{ name: siteConfig.organizationName }],
+	creator: siteConfig.organizationName,
+	publisher: siteConfig.organizationName,
+	referrer: "origin-when-cross-origin",
 	icons: {
 		icon: [
 			{ url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -40,29 +49,41 @@ export const metadata: Metadata = {
 		],
 	},
 	manifest: "/favicon/site.webmanifest",
+	verification: googleSiteVerification
+		? {
+				google: googleSiteVerification,
+			}
+		: undefined,
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+			"max-video-preview": -1,
+		},
+	},
 	openGraph: {
-		title: "INACOMP 2.0 | Informatics National Competition",
-		description:
-			"Kompetisi IT nasional untuk pelajar dengan dua jalur utama: Competitive Programming dan UI/UX Design.",
-		url: "https://inacomp.vercel.app/",
-		siteName: "INACOMP 2.0",
-		locale: "id_ID",
+		title: siteConfig.defaultTitle,
+		description: siteConfig.description,
+		url: absoluteUrl("/"),
+		siteName: siteConfig.name,
+		locale: siteConfig.locale,
 		type: "website",
 		images: [
 			{
-				url: "/favicon/android-chrome-512x512.png",
-				width: 512,
-				height: 512,
-				alt: "INACOMP 2.0",
+				...siteConfig.defaultOgImage,
+				url: absoluteUrl(siteConfig.defaultOgImage.url),
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "INACOMP 2.0 | Informatics National Competition",
-		description:
-			"Kompetisi IT nasional untuk pelajar dengan track Competitive Programming dan UI/UX Design.",
-		images: ["/favicon/android-chrome-512x512.png"],
+		title: siteConfig.defaultTitle,
+		description: siteConfig.description,
+		images: [absoluteUrl(siteConfig.defaultOgImage.url)],
 	},
 };
 
@@ -77,6 +98,19 @@ export default function RootLayout({
 			className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
 		>
 			<body className="flex min-h-full flex-col bg-background text-foreground font-sans">
+				{googleTagManagerId ? (
+					<noscript>
+						<iframe
+							src={`https://www.googletagmanager.com/ns.html?id=${googleTagManagerId}`}
+							height="0"
+							width="0"
+							style={{ display: "none", visibility: "hidden" }}
+						/>
+					</noscript>
+				) : null}
+				{googleTagManagerId ? (
+					<GoogleTagManager gtmId={googleTagManagerId} />
+				) : null}
 				<Navbar />
 				<main className="flex-1">{children}</main>
 				<ScrollToTopButton />

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -23,11 +22,21 @@ import {
 	homeGallery,
 	officialTimeline,
 } from "@/lib/site-content";
+import {
+	absoluteUrl,
+	buildPageMetadata,
+	eventSchedule,
+	siteConfig,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
-	title: "INACOMP 2.0 | Informatics National Competition",
-	description:
-		"INACOMP 2.0 adalah kompetisi IT nasional untuk siswa SMA/SMK sederajat dengan cabang Competitive Programming dan UI/UX Design.",
+const pageTitle = siteConfig.defaultTitle;
+const pageDescription =
+	"INACOMP 2.0 adalah kompetisi IT nasional untuk siswa SMA/SMK sederajat dengan cabang Competitive Programming dan UI/UX Design.";
+
+export const metadata = buildPageMetadata({
+	title: pageTitle,
+	description: pageDescription,
+	path: "/",
 	keywords: [
 		"INACOMP 2.0",
 		"Informatics National Competition",
@@ -36,33 +45,11 @@ export const metadata: Metadata = {
 		"ui ux design competition siswa",
 		"lomba informatika nasional",
 	],
-	alternates: {
-		canonical: "/",
+	image: {
+		url: "/assets/inacomp/home/dua.png",
+		alt: "Suasana INACOMP 2.0",
 	},
-	openGraph: {
-		title: "INACOMP 2.0 | Informatics National Competition",
-		description:
-			"Kompetisi IT nasional untuk pelajar dengan cabang Competitive Programming dan UI/UX Design.",
-		url: "/",
-		type: "website",
-		locale: "id_ID",
-		images: [
-			{
-				url: "/assets/logo-inacomp.png",
-				width: 1200,
-				height: 1200,
-				alt: "Logo INACOMP 2.0",
-			},
-		],
-	},
-	twitter: {
-		card: "summary_large_image",
-		title: "INACOMP 2.0 | Informatics National Competition",
-		description:
-			"Kompetisi IT nasional untuk pelajar dengan cabang Competitive Programming dan UI/UX Design.",
-		images: ["/assets/logo-inacomp.png"],
-	},
-};
+});
 
 const overviewCards = [
 	{
@@ -138,36 +125,35 @@ const homeStructuredData = {
 	"@graph": [
 		{
 			"@type": "WebSite",
-			"@id": "https://inacomp.vercel.app/#website",
-			url: "https://inacomp.vercel.app/",
-			name: "INACOMP 2.0",
+			"@id": absoluteUrl("/#website"),
+			url: absoluteUrl("/"),
+			name: siteConfig.name,
 			alternateName: "Informatics National Competition",
-			inLanguage: "id-ID",
+			inLanguage: siteConfig.languageTag,
 		},
 		{
 			"@type": "Organization",
-			"@id": "https://inacomp.vercel.app/#organization",
-			name: "BEM PTIK Universitas Negeri Jakarta",
-			url: "https://inacomp.vercel.app/",
+			"@id": absoluteUrl("/#organization"),
+			name: siteConfig.organizationName,
+			url: absoluteUrl("/"),
 			logo: {
 				"@type": "ImageObject",
-				url: "https://inacomp.vercel.app/assets/logo-inacomp.png",
+				url: absoluteUrl("/assets/logo-inacomp.png"),
 			},
 		},
 		{
 			"@type": "Event",
-			"@id": "https://inacomp.vercel.app/#event",
-			name: "INACOMP 2.0",
-			description:
-				"Kompetisi IT nasional untuk siswa SMA/SMK sederajat dengan cabang Competitive Programming dan UI/UX Design.",
-			url: "https://inacomp.vercel.app/",
-			image: ["https://inacomp.vercel.app/assets/logo-inacomp.png"],
-			startDate: "2026-05-18",
-			endDate: "2026-07-04",
+			"@id": absoluteUrl("/#event"),
+			name: siteConfig.name,
+			description: pageDescription,
+			url: absoluteUrl("/"),
+			image: [absoluteUrl("/assets/inacomp/home/dua.png")],
+			startDate: eventSchedule.startDate,
+			endDate: eventSchedule.endDate,
 			eventAttendanceMode: "https://schema.org/MixedEventAttendanceMode",
 			eventStatus: "https://schema.org/EventScheduled",
 			organizer: {
-				"@id": "https://inacomp.vercel.app/#organization",
+				"@id": absoluteUrl("/#organization"),
 			},
 			audience: {
 				"@type": "EducationalAudience",

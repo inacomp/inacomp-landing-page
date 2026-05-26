@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import {
 	ArrowRight,
@@ -12,14 +11,16 @@ import {
 } from "lucide-react";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { Reveal } from "@/components/marketing/reveal";
-import { GalleryMosaic, SectionIntro } from "@/components/marketing/primitives";
+import { SectionIntro } from "@/components/marketing/primitives";
 import { Container } from "@/components/ui/container";
-import { cpFaqItems, cpGallery, cpTimeline } from "@/lib/site-content";
+import { cpFaqItems, cpTimeline } from "@/lib/site-content";
+import { absoluteUrl, buildPageMetadata, eventSchedule } from "@/lib/seo";
 
-const pageUrl = "https://inacomp.vercel.app/competitive-programming";
+const pagePath = "/competitive-programming";
+const pageUrl = absoluteUrl(pagePath);
 const pageTitle = "Competitive Programming | INACOMP 2.0";
 const pageDescription =
-	"Competitive Programming INACOMP 2.0 adalah Kategori Lomba nasional untuk pelajar yang ingin menguji logika, ketepatan solusi, dan kemampuan problem solving secara terstruktur.";
+	"Competitive Programming INACOMP 2.0 adalah kategori lomba nasional untuk pelajar yang ingin menguji logika, ketepatan solusi, dan kemampuan problem solving secara terstruktur.";
 
 const formatItems = [
 	{
@@ -65,7 +66,7 @@ const structuredData = {
 					"@type": "ListItem",
 					position: 1,
 					name: "INACOMP 2.0",
-					item: "https://inacomp.vercel.app/",
+					item: absoluteUrl("/"),
 				},
 				{
 					"@type": "ListItem",
@@ -81,14 +82,14 @@ const structuredData = {
 			description: pageDescription,
 			eventAttendanceMode: "https://schema.org/MixedEventAttendanceMode",
 			eventStatus: "https://schema.org/EventScheduled",
-			startDate: "2026-05-18",
-			endDate: "2026-07-04",
+			startDate: eventSchedule.startDate,
+			endDate: eventSchedule.endDate,
 			url: pageUrl,
-			image: ["https://inacomp.vercel.app/assets/booklet-cp.jpg"],
+			image: [absoluteUrl("/assets/booklet-cp.jpg")],
 			organizer: {
 				"@type": "Organization",
 				name: "BEM PTIK Universitas Negeri Jakarta",
-				url: "https://inacomp.vercel.app/",
+				url: absoluteUrl("/"),
 			},
 			audience: {
 				"@type": "EducationalAudience",
@@ -98,38 +99,21 @@ const structuredData = {
 	],
 };
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
 	title: pageTitle,
 	description: pageDescription,
+	path: pagePath,
 	keywords: [
 		"competitive programming inacomp",
 		"kompetisi coding pelajar nasional",
 		"lomba algoritma sma smk",
 		"INACOMP 2.0 competitive programming",
 	],
-	alternates: {
-		canonical: "/competitive-programming",
+	image: {
+		url: "/assets/booklet-cp.jpg",
+		alt: "Competitive Programming INACOMP 2.0",
 	},
-	openGraph: {
-		title: pageTitle,
-		description: pageDescription,
-		url: pageUrl,
-		type: "website",
-		locale: "id_ID",
-		images: [
-			{
-				url: "/assets/booklet-cp.jpg",
-				alt: "Competitive Programming INACOMP 2.0",
-			},
-		],
-	},
-	twitter: {
-		card: "summary_large_image",
-		title: pageTitle,
-		description: pageDescription,
-		images: ["/assets/booklet-cp.jpg"],
-	},
-};
+});
 
 export default function CompetitiveProgrammingPage() {
 	return (

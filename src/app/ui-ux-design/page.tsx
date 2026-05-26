@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import {
 	ArrowRight,
@@ -11,11 +10,18 @@ import {
 } from "lucide-react";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { Reveal } from "@/components/marketing/reveal";
-import { GalleryMosaic, SectionIntro } from "@/components/marketing/primitives";
+import { SectionIntro } from "@/components/marketing/primitives";
 import { Container } from "@/components/ui/container";
-import { uiuxFaqItems, uiuxGallery, uiuxTimeline } from "@/lib/site-content";
+import { uiuxFaqItems, uiuxTimeline } from "@/lib/site-content";
+import {
+	absoluteUrl,
+	buildPageMetadata,
+	eventSchedule,
+	siteConfig,
+} from "@/lib/seo";
 
-const pageUrl = "https://inacomp.vercel.app/ui-ux-design";
+const pagePath = "/ui-ux-design";
+const pageUrl = absoluteUrl(pagePath);
 const pageTitle = "UI/UX Design | INACOMP 2.0";
 const pageDescription =
 	"UI/UX Design INACOMP 2.0 adalah cabang kompetisi nasional untuk pelajar yang menilai riset UX, desain UI, dan kualitas prototype atau mockup secara terstruktur.";
@@ -73,7 +79,7 @@ const structuredData = {
 					"@type": "ListItem",
 					position: 1,
 					name: "INACOMP 2.0",
-					item: "https://inacomp.vercel.app/",
+					item: absoluteUrl("/"),
 				},
 				{
 					"@type": "ListItem",
@@ -89,14 +95,14 @@ const structuredData = {
 			description: pageDescription,
 			eventAttendanceMode: "https://schema.org/MixedEventAttendanceMode",
 			eventStatus: "https://schema.org/EventScheduled",
-			startDate: "2026-05-18",
-			endDate: "2026-07-04",
+			startDate: eventSchedule.startDate,
+			endDate: eventSchedule.endDate,
 			url: pageUrl,
-			image: ["https://inacomp.vercel.app/assets/logo-inacomp.png"],
+			image: [absoluteUrl("/assets/logo-inacomp.png")],
 			organizer: {
 				"@type": "Organization",
-				name: "BEM PTIK Universitas Negeri Jakarta",
-				url: "https://inacomp.vercel.app/",
+				name: siteConfig.organizationName,
+				url: absoluteUrl("/"),
 			},
 			audience: {
 				"@type": "EducationalAudience",
@@ -106,38 +112,21 @@ const structuredData = {
 	],
 };
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
 	title: pageTitle,
 	description: pageDescription,
+	path: pagePath,
 	keywords: [
 		"ui ux design inacomp",
 		"kompetisi ui ux design pelajar",
 		"proposal pdf prototype figma lomba",
 		"INACOMP 2.0 ui ux",
 	],
-	alternates: {
-		canonical: "/ui-ux-design",
+	image: {
+		url: "/assets/logo-inacomp.png",
+		alt: "UI/UX Design INACOMP 2.0",
 	},
-	openGraph: {
-		title: pageTitle,
-		description: pageDescription,
-		url: pageUrl,
-		type: "website",
-		locale: "id_ID",
-		images: [
-			{
-				url: "/assets/logo-inacomp.png",
-				alt: "UI/UX Design INACOMP 2.0",
-			},
-		],
-	},
-	twitter: {
-		card: "summary_large_image",
-		title: pageTitle,
-		description: pageDescription,
-		images: ["/assets/logo-inacomp.png"],
-	},
-};
+});
 
 export default function UiUxDesignPage() {
 	return (
