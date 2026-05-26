@@ -53,7 +53,7 @@ export function MobileNavMenu({ navLinks }: MobileNavMenuProps) {
               onClick={() => setIsOpen(false)}
               className="primary-button mt-2"
             >
-              Lihat Cabang
+              Lihat Kategori
             </Link>
           </div>
         </div>

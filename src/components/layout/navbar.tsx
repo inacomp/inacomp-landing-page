@@ -4,11 +4,11 @@ import { MobileNavMenu } from "@/components/layout/mobile-nav-menu";
 import { Container } from "@/components/ui/container";
 
 const navLinks = [
-	{ href: "/#tracks", label: "Cabang" },
+	{ href: "/#tracks", label: "Kategori" },
 	{ href: "/#timeline", label: "Timeline" },
-	{ href: "/#faq", label: "FAQ" },
 	{ href: "/competitive-programming", label: "Competitive Programming" },
 	{ href: "/ui-ux-design", label: "UI/UX Design" },
+	{ href: "/#faq", label: "FAQ" },
 ];
 
 export function Navbar() {
@@ -52,7 +52,7 @@ export function Navbar() {
 							href="/#tracks"
 							className="primary-button px-5 py-2.5 text-sm"
 						>
-							Lihat Cabang
+							Lihat Kategori
 						</Link>
 					</div>
 
