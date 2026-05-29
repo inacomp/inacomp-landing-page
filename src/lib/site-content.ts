@@ -200,6 +200,28 @@ export const uiuxFaqItems: FaqItem[] = [
 	},
 ];
 
+export const contactAdmins = [
+	{
+		name: "INACOMP",
+		role: "Contact Utama",
+		phoneDisplay: "+62 831-7786-2220",
+		phoneHref: "6283177862220",
+	},
+	{
+		name: "Faiz",
+		role: "Admin Kompetisi",
+		phoneDisplay: "+62 881-1814-203",
+		phoneHref: "628811814203",
+	},
+] as const;
+
+export const whatsappMessage =
+	"Halo Admin INACOMP2.0, saya ingin bertanya terkait lomba INACOMP 2.0...";
+
+export function buildWhatsAppUrl(phoneNumber: string) {
+	return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+}
+
 export const homeGallery: GalleryImage[] = [
 	{
 		src: "/assets/inacomp/home/empat.jpg",

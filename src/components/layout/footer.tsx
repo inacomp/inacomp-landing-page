@@ -5,6 +5,7 @@ const footerLinks = [
   { href: "/", label: "Home" },
   { href: "/competitive-programming", label: "Competitive Programming" },
   { href: "/ui-ux-design", label: "UI/UX Design" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Footer() {

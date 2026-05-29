@@ -17,6 +17,7 @@ import { FaqAccordion } from "@/components/faq-accordion";
 import { Reveal } from "@/components/marketing/reveal";
 import { GalleryMosaic, SectionIntro } from "@/components/marketing/primitives";
 import { Container } from "@/components/ui/container";
+import { ContactAdminSection } from "@/components/sections/shared/contact-admin-section";
 import {
 	homeFaqItems,
 	homeGallery,
@@ -120,6 +121,19 @@ const trackDetails = [
 		],
 	},
 ];
+
+const registrationCategories = [
+	{
+		title: "Competitive Programming",
+		description:
+			"UI tombol pendaftaran untuk cabang Competitive Programming sudah disiapkan. Link Google Form akan ditambahkan setelah form resmi tersedia.",
+	},
+	{
+		title: "UI/UX Design",
+		description:
+			"UI tombol pendaftaran untuk cabang UI/UX Design sudah disiapkan. Link Google Form akan ditambahkan setelah form resmi tersedia.",
+	},
+] as const;
 
 const homeStructuredData = {
 	"@context": "https://schema.org",
@@ -292,7 +306,7 @@ export default function Home() {
 							<SectionIntro
 								eyebrow="Competition Overview"
 								title="Dua cabang dengan karakter yang berbeda, tetapi sama-sama menuntut kualitas."
-								description="Home page harus langsung menunjukkan bahwa INACOMP bukan satu kompetisi generik. Competitive Programming dan UI/UX Design punya fokus yang berbeda, dengan atmosfer dan tantangan masing-masing."
+								description="Home page harus langsung menunjukkan bahwa INACOMP bukan satu kompetisi generik. Competitive Programming dan UI/UX Design punya fokus yang berbeda, dengan atmosfer and tantangan masing-masing."
 							/>
 						</Reveal>
 
@@ -463,54 +477,6 @@ export default function Home() {
 					</Container>
 				</section>
 
-				<section id="contact" className="section-space">
-					<Container>
-						<Reveal>
-							<div className="hero-panel relative overflow-hidden p-8 sm:p-12 lg:p-16">
-								<div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(45,212,191,0.1),transparent_40%)]" />
-								<div className="relative grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
-									<div className="max-w-2xl space-y-6">
-										<span className="eyebrow">Contact Admin</span>
-										<h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-											Ada pertanyaan teknis?
-										</h2>
-										<p className="text-lg leading-relaxed text-muted">
-											Tim admin kami siap membantu menjelaskan detail teknis
-											kompetisi, regulasi, atau kendala pendaftaran melalui
-											WhatsApp.
-										</p>
-									</div>
-
-									<Link
-										href="https://wa.me/6289531030000"
-										target="_blank"
-										className="group flex items-center gap-4 rounded-3xl border border-white/10 bg-white/5 p-4 pr-8 backdrop-blur-xl transition-all hover:bg-white/10 hover:border-brand-cyan/30"
-									>
-										<div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-success/20 text-success shadow-[0_0_20px_rgba(52,211,153,0.2)] transition-transform group-hover:scale-110">
-											<svg
-												viewBox="0 0 24 24"
-												className="h-8 w-8 fill-current"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-											</svg>
-										</div>
-										<div>
-											<p className="text-xs font-bold uppercase tracking-widest text-success">
-												WhatsApp Fast Response
-											</p>
-											<p className="mt-1 text-2xl font-bold text-white">
-												0895-3103-0xxx
-											</p>
-										</div>
-										<ArrowRight className="ml-4 h-6 w-6 text-muted transition-transform group-hover:translate-x-1 group-hover:text-white" />
-									</Link>
-								</div>
-							</div>
-						</Reveal>
-					</Container>
-				</section>
-
 				<section id="faq" className="section-space soft-section">
 					<Container>
 						<Reveal>
@@ -527,7 +493,7 @@ export default function Home() {
 						</Reveal>
 					</Container>
 				</section>
-
+				<ContactAdminSection />
 				<section className="section-space pt-10">
 					<Container>
 						<Reveal>
@@ -536,7 +502,7 @@ export default function Home() {
 									<div className="space-y-4">
 										<span className="eyebrow">
 											<CalendarRange className="h-3.5 w-3.5" />
-											Final CTA
+											CTA
 										</span>
 										<h2 className="max-w-3xl text-balance text-3xl font-bold sm:text-4xl lg:text-5xl">
 											Siap memilih cabang yang paling sesuai dengan cara timmu
@@ -555,6 +521,56 @@ export default function Home() {
 										<Link href="#timeline" className="secondary-button">
 											Cek Jadwal Resmi
 										</Link>
+									</div>
+								</div>
+							</div>
+						</Reveal>
+					</Container>
+				</section>
+				<section className="section-space pt-0">
+					<Container>
+						<Reveal>
+							<div className="hero-surface px-6 py-8 sm:px-8 sm:py-10 lg:px-12">
+								<div className="space-y-6">
+									<div className="space-y-4">
+										<span className="eyebrow">
+											<NotebookTabs className="h-3.5 w-3.5" />
+											Form Pendaftaran
+										</span>
+										<h2 className="max-w-3xl text-balance text-3xl font-bold sm:text-4xl lg:text-5xl">
+											DAFTAR SEKARANG
+										</h2>
+										<p className="max-w-2xl text-base leading-8 text-muted sm:text-lg">
+											Daftar Sekarang untuk dapat mengikuti kompetisi{" "}
+											<b>INACOMP 2.0 </b>
+										</p>
+									</div>
+
+									<div className="grid gap-4 lg:grid-cols-2">
+										{registrationCategories.map((item) => (
+											<div
+												key={item.title}
+												className="surface-card flex flex-col gap-4 px-5 py-5 sm:px-6"
+											>
+												<div className="space-y-2">
+													<p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-dark">
+														Kategori Lomba
+													</p>
+													<h3 className="text-2xl font-bold">{item.title}</h3>
+													<p className="text-sm leading-7 text-muted">
+														{item.description}
+													</p>
+												</div>
+
+												<button
+													type="button"
+													disabled
+													className="inline-flex min-h-13 items-center justify-center rounded-full border border-dashed border-slate-300 bg-slate-100 px-6 text-sm font-semibold text-slate-500 shadow-sm"
+												>
+													Form {item.title} Segera Hadir
+												</button>
+											</div>
+										))}
 									</div>
 								</div>
 							</div>

@@ -122,7 +122,7 @@
 	}
 
 	.surface-panel {
-		background: rgba(255, 255, 255, 0.92);
+		background: rgba(255, 255, 255, 0.98);
 		border: 1px solid rgba(226, 232, 240, 0.92);
 		box-shadow: var(--shadow-panel);
 		@apply rounded-[24px];

@@ -12,6 +12,7 @@ import { FaqAccordion } from "@/components/faq-accordion";
 import { Reveal } from "@/components/marketing/reveal";
 import { SectionIntro } from "@/components/marketing/primitives";
 import { Container } from "@/components/ui/container";
+import { ContactAdminSection } from "@/components/sections/shared/contact-admin-section";
 import { uiuxFaqItems, uiuxTimeline } from "@/lib/site-content";
 import {
 	absoluteUrl,
@@ -397,6 +398,8 @@ export default function UiUxDesignPage() {
 					</Container>
 				</section>
 
+				<ContactAdminSection />
+
 				<section className="section-space pt-10">
 					<Container>
 						<Reveal>
@@ -419,6 +422,13 @@ export default function UiUxDesignPage() {
 									</div>
 
 									<div className="flex flex-col gap-3">
+										<button
+											type="button"
+											disabled
+											className="inline-flex min-h-13 items-center justify-center rounded-full border border-dashed border-slate-300 bg-slate-100 px-6 text-sm font-semibold text-slate-500 shadow-sm"
+										>
+											Form UI/UX Design Segera Hadir
+										</button>
 										<Link href="/#tracks" className="primary-button">
 											Kembali ke Kategori Lomba
 										</Link>
@@ -428,6 +438,11 @@ export default function UiUxDesignPage() {
 										>
 											Lihat Competitive Programming
 										</Link>
+										<p className="max-w-xs text-sm leading-7 text-muted">
+											Tombol form sudah disiapkan. Link Google Form cabang
+											UI/UX Design akan ditambahkan setelah form resmi
+											tersedia.
+										</p>
 									</div>
 								</div>
 							</div>

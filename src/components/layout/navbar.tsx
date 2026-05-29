@@ -9,13 +9,14 @@ const navLinks = [
 	{ href: "/competitive-programming", label: "Competitive Programming" },
 	{ href: "/ui-ux-design", label: "UI/UX Design" },
 	{ href: "/#faq", label: "FAQ" },
+	{ href: "/#contact", label: "Contact" },
 ];
 
 export function Navbar() {
 	return (
 		<header className="sticky top-0 z-50 px-3 pt-3 sm:px-4">
-			<Container>
-				<div className="flex min-h-18 flex-wrap items-center justify-between gap-4 rounded-full border border-slate-200/90 bg-white/88 px-4 py-3 shadow-[0_12px_28px_rgba(15,23,42,0.08)] backdrop-blur-md sm:px-5">
+			<Container className="relative">
+				<div className="flex min-h-18 items-center justify-between gap-4 rounded-full border border-slate-200/90 bg-white/88 px-4 py-3 shadow-[0_12px_28px_rgba(15,23,42,0.08)] backdrop-blur-md sm:px-5">
 					<Link href="/" className="group flex items-center gap-4">
 						<div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-[14px] border border-slate-200 bg-slate-50 transition-transform group-hover:scale-[1.03]">
 							<Image

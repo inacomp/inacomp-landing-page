@@ -13,6 +13,7 @@ import { FaqAccordion } from "@/components/faq-accordion";
 import { Reveal } from "@/components/marketing/reveal";
 import { SectionIntro } from "@/components/marketing/primitives";
 import { Container } from "@/components/ui/container";
+import { ContactAdminSection } from "@/components/sections/shared/contact-admin-section";
 import { cpFaqItems, cpTimeline } from "@/lib/site-content";
 import {
 	absoluteUrl,
@@ -43,7 +44,7 @@ const formatItems = [
 	{
 		title: "Atmosfer teknis yang rapi",
 		description:
-			"Halaman ini dibangun agar terasa kompetitif dan teknis, tetapi tetap bersih, mudah dibaca, dan tidak berlebihan secara visual.",
+			"Halaman ini dibangun agar terasa kompetitif and teknis, tetapi tetap bersih, mudah dibaca, dan tidak berlebihan secara visual.",
 		icon: Cpu,
 	},
 ];
@@ -148,7 +149,7 @@ export default function CompetitiveProgrammingPage() {
 										</h1>
 										<p className="max-w-2xl text-lg leading-8 text-muted">
 											Competitive Programming INACOMP 2.0 dirancang untuk
-											pelajar yang kuat di problem solving dan siap tampil pada
+											pelajar yang kuat di problem solving and siap tampil pada
 											atmosfer kompetisi nasional yang terstruktur.
 										</p>
 									</div>
@@ -173,11 +174,11 @@ export default function CompetitiveProgrammingPage() {
 												Competition Format
 											</p>
 											<h2 className="mt-3 text-2xl font-bold">
-												Fokus pada pembacaan soal, ketenangan, dan kualitas
+												Fokus pada pembacaan soal, ketenangan, and kualitas
 												keputusan.
 											</h2>
 											<p className="mt-3 text-sm leading-7 text-muted">
-												Tampilan halaman ini sengaja dibuat lebih tegas dan
+												Tampilan halaman ini sengaja dibuat lebih tegas and
 												lebih ringkas, agar atmosfer teknisnya terasa tanpa
 												berubah menjadi visual yang gelap atau berlebihan.
 											</p>
@@ -213,8 +214,8 @@ export default function CompetitiveProgrammingPage() {
 						<Reveal>
 							<SectionIntro
 								eyebrow="Competition Format"
-								title="Competitive Programming harus terasa fokus, terukur, dan disiplin."
-								description="Cabang ini tidak membutuhkan visual yang ramai. Yang lebih penting adalah struktur informasi yang tajam dan suasana yang konsisten dengan karakter lombanya."
+								title="Competitive Programming harus terasa fokus, terukur, and disiplin."
+								description="Cabang ini tidak membutuhkan visual yang ramai. Yang lebih penting adalah struktur informasi yang tajam and suasana yang konsisten dengan karakter lombanya."
 							/>
 						</Reveal>
 
@@ -272,7 +273,7 @@ export default function CompetitiveProgrammingPage() {
 								<SectionIntro
 									eyebrow="Benefits"
 									title="Manfaat utama mengikuti Competitive Programming di INACOMP."
-									description="Selain hasil lomba, peserta membawa pulang pengalaman berpikir yang lebih terstruktur dan nilai kompetitif yang lebih nyata."
+									description="Selain hasil lomba, peserta membawa pulang pengalaman berpikir yang lebih terstruktur and nilai kompetitif yang lebih nyata."
 								/>
 							</Reveal>
 
@@ -340,6 +341,8 @@ export default function CompetitiveProgrammingPage() {
 					</Container>
 				</section>
 
+				<ContactAdminSection />
+
 				<section className="section-space pt-10">
 					<Container>
 						<Reveal>
@@ -351,23 +354,35 @@ export default function CompetitiveProgrammingPage() {
 											Competitive Programming CTA
 										</span>
 										<h2 className="max-w-3xl text-balance text-3xl font-bold sm:text-4xl lg:text-5xl">
-											Kalau kekuatanmu ada di logika dan akurasi, cabang ini
+											Kalau kekuatanmu ada di logika and akurasi, cabang ini
 											layak kamu prioritaskan.
 										</h2>
 										<p className="max-w-2xl text-base leading-8 text-muted sm:text-lg">
-											Pelajari kembali timeline dan arah kompetisinya, lalu
+											Pelajari kembali timeline and arah kompetisinya, lalu
 											kembalilah ke halaman utama untuk memilih jalur yang
 											paling tepat bagi timmu.
 										</p>
 									</div>
 
 									<div className="flex flex-col gap-3">
+										<button
+											type="button"
+											disabled
+											className="inline-flex min-h-13 items-center justify-center rounded-full border border-dashed border-slate-300 bg-slate-100 px-6 text-sm font-semibold text-slate-500 shadow-sm"
+										>
+											Form Competitive Programming Segera Hadir
+										</button>
 										<Link href="/#tracks" className="primary-button">
 											Kembali ke Kategori Lomba
 										</Link>
 										<Link href="/ui-ux-design" className="secondary-button">
 											Lihat UI/UX Design
 										</Link>
+										<p className="max-w-xs text-sm leading-7 text-muted">
+											Tombol form sudah disiapkan. Link Google Form cabang
+											Competitive Programming akan ditambahkan setelah form
+											resmi tersedia.
+										</p>
 									</div>
 								</div>
 							</div>
