@@ -14,7 +14,12 @@ import { Reveal } from "@/components/marketing/reveal";
 import { SectionIntro } from "@/components/marketing/primitives";
 import { Container } from "@/components/ui/container";
 import { cpFaqItems, cpTimeline } from "@/lib/site-content";
-import { absoluteUrl, buildPageMetadata, eventSchedule } from "@/lib/seo";
+import {
+	absoluteUrl,
+	buildHybridEventLocation,
+	buildPageMetadata,
+	eventSchedule,
+} from "@/lib/seo";
 
 const pagePath = "/competitive-programming";
 const pageUrl = absoluteUrl(pagePath);
@@ -86,6 +91,7 @@ const structuredData = {
 			endDate: eventSchedule.endDate,
 			url: pageUrl,
 			image: [absoluteUrl("/assets/booklet-cp.jpg")],
+			location: buildHybridEventLocation(pageUrl),
 			organizer: {
 				"@type": "Organization",
 				name: "BEM PTIK Universitas Negeri Jakarta",

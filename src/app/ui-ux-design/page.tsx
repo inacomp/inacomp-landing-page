@@ -15,6 +15,7 @@ import { Container } from "@/components/ui/container";
 import { uiuxFaqItems, uiuxTimeline } from "@/lib/site-content";
 import {
 	absoluteUrl,
+	buildHybridEventLocation,
 	buildPageMetadata,
 	eventSchedule,
 	siteConfig,
@@ -99,6 +100,7 @@ const structuredData = {
 			endDate: eventSchedule.endDate,
 			url: pageUrl,
 			image: [absoluteUrl("/assets/logo-inacomp.png")],
+			location: buildHybridEventLocation(pageUrl),
 			organizer: {
 				"@type": "Organization",
 				name: siteConfig.organizationName,

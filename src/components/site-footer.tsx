@@ -22,7 +22,7 @@ export function SiteFooter() {
 					</div>
 					<p className="max-w-xl text-sm leading-7 text-slate-600 sm:text-base">
 						Informatics National Competition 2.0 merupakan kompetisi nasional di
-						bidang Competitive Programming dan Cisco Networking untuk siswa/i
+						bidang Competitive Programming dan UI/UX Design untuk siswa/i
 						SMA/SMK/sederajat.
 					</p>
 					<p className="text-sm font-medium text-slate-500">

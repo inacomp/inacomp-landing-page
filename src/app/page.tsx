@@ -24,6 +24,7 @@ import {
 } from "@/lib/site-content";
 import {
 	absoluteUrl,
+	buildHybridEventLocation,
 	buildPageMetadata,
 	eventSchedule,
 	siteConfig,
@@ -152,6 +153,7 @@ const homeStructuredData = {
 			endDate: eventSchedule.endDate,
 			eventAttendanceMode: "https://schema.org/MixedEventAttendanceMode",
 			eventStatus: "https://schema.org/EventScheduled",
+			location: buildHybridEventLocation(absoluteUrl("/")),
 			organizer: {
 				"@id": absoluteUrl("/#organization"),
 			},

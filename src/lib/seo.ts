@@ -55,6 +55,26 @@ export const eventSchedule = {
 	endDate: "2026-07-04",
 } as const;
 
+const eventPlace = {
+	"@type": "Place",
+	name: "Jakarta, Indonesia",
+	address: {
+		"@type": "PostalAddress",
+		addressLocality: "Jakarta",
+		addressCountry: "ID",
+	},
+} as const;
+
+export function buildHybridEventLocation(virtualEventUrl: string) {
+	return [
+		eventPlace,
+		{
+			"@type": "VirtualLocation",
+			url: virtualEventUrl,
+		},
+	] as const;
+}
+
 export const googleTagManagerId =
 	process.env.NEXT_PUBLIC_GTM_ID?.trim() || undefined;
 
