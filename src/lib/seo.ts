@@ -76,7 +76,7 @@ export function buildHybridEventLocation(virtualEventUrl: string) {
 }
 
 export const googleTagManagerId =
-	process.env.NEXT_PUBLIC_GTM_ID?.trim() || undefined;
+	process.env.NEXT_PUBLIC_GTM_ID?.trim() || "GTM-5F4X75HJ";
 
 export const googleSiteVerification =
 	process.env.GOOGLE_SITE_VERIFICATION?.trim() ||
