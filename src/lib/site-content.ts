@@ -14,42 +14,42 @@ export type GalleryImage = {
 
 export const officialTimeline = [
 	{
-		date: "18 Mei – 14 Juni 2026",
+		date: "8 – 29 Juni 2026",
 		title: "Pendaftaran Peserta Perlombaan",
 		note: "Pendaftaran dibuka untuk seluruh peserta dari dua Kategori Lomba.",
 	},
 	{
-		date: "16 Juni 2026",
-		title: "Technical Meeting Penyisihan",
-		note: "Panitia menjelaskan alur pelaksanaan, ketentuan umum, dan teknis babak awal.",
-	},
-	{
-		date: "17 Juni 2026",
-		title: "Penyisihan Competitive Programming",
-		note: "Peserta Competitive Programming mengikuti babak penyisihan sesuai format lomba.",
-	},
-	{
-		date: "17 Juni 2026",
-		title: "Penyisihan UI/UX",
+		date: "29 Juni – 5 Juli 2026",
+		title: "Penjurian Penyisihan UI/UX",
 		note: "Peserta UI/UX masuk ke fase seleksi awal berdasarkan berkas dan karya yang dikumpulkan.",
 	},
 	{
-		date: "19 Juni 2026",
+		date: "2 Juli 2026",
+		title: "Technical Meeting Penyisihan CP",
+		note: "Panitia menjelaskan alur pelaksanaan, ketentuan umum, dan teknis babak awal CP.",
+	},
+	{
+		date: "4 Juli 2026",
+		title: "Penyisihan Competitive Programming",
+		note: "Peserta Competitive Programming mengikuti babak penyisihan secara online.",
+	},
+	{
+		date: "6 Juli 2026",
 		title: "Pengumuman Finalis Perlombaan",
 		note: "Finalis resmi dari kedua cabang diumumkan oleh panitia.",
 	},
 	{
-		date: "24 Juni 2026",
+		date: "8 Juli 2026",
 		title: "Technical Meeting Final",
 		note: "Finalis mengikuti pengarahan teknis menjelang babak akhir.",
 	},
 	{
-		date: "27 Juni 2026",
+		date: "11 Juli 2026",
 		title: "Final Perlombaan",
-		note: "Babak final menjadi puncak penilaian dan presentasi karya terbaik.",
+		note: "Babak final menjadi puncak penilaian dan presentasi karya terbaik di Universitas Negeri Jakarta.",
 	},
 	{
-		date: "4 Juli 2026",
+		date: "14 Juli 2026",
 		title: "Pengumuman Juara",
 		note: "Pemenang resmi INACOMP 2.0 diumumkan kepada publik.",
 	},
@@ -57,77 +57,72 @@ export const officialTimeline = [
 
 export const cpTimeline = [
 	{
-		date: "18 Mei – 14 Juni 2026",
-		title: "Pendaftaran Competitive Programming",
-		note: "Pendaftaran dibuka untuk peserta yang memilih cabang Competitive Programming.",
+		date: "8 – 29 Juni 2026",
+		title: "Pendaftaran Peserta Perlombaan",
+		note: "Pendaftaran online untuk peserta cabang Competitive Programming.",
 	},
 	{
-		date: "16 Juni 2026",
-		title: "Technical Meeting Penyisihan Competitive Programming",
-		note: "Panitia menjelaskan alur teknis dan kesiapan peserta sebelum babak penyisihan.",
-	},
-	{
-		date: "17 Juni 2026",
-		title: "Penyisihan Competitive Programming",
-		note: "Peserta mengikuti babak penyisihan sesuai format dan tantangan cabang Competitive Programming.",
-	},
-	{
-		date: "19 Juni 2026",
-		title: "Pengumuman Finalis Competitive Programming",
-		note: "Finalis cabang Competitive Programming diumumkan secara resmi oleh panitia.",
-	},
-	{
-		date: "24 Juni 2026",
-		title: "Technical Meeting Final Competitive Programming",
-		note: "Finalis Competitive Programming menerima pengarahan teknis untuk babak akhir.",
-	},
-	{
-		date: "27 Juni 2026",
-		title: "Final Competitive Programming",
-		note: "Babak final menjadi penentu performa terbaik peserta Competitive Programming.",
+		date: "2 Juli 2026",
+		title: "Technical Meeting Penyisihan",
+		note: "Penjelasan alur teknis dan kesiapan peserta sebelum babak penyisihan.",
 	},
 	{
 		date: "4 Juli 2026",
-		title: "Pengumuman Juara Competitive Programming",
-		note: "Pemenang cabang Competitive Programming diumumkan bersama hasil akhir INACOMP 2.0.",
+		title: "Penyisihan Competitive Programming",
+		note: "Pelaksanaan penyisihan secara online.",
+	},
+	{
+		date: "6 Juli 2026",
+		title: "Pengumuman Finalis Perlombaan",
+		note: "Diumumkan secara resmi oleh panitia.",
+	},
+	{
+		date: "8 Juli 2026",
+		title: "Technical Meeting Final",
+		note: "Pengarahan teknis untuk babak akhir.",
+	},
+	{
+		date: "11 Juli 2026",
+		title: "Final Competitive Programming",
+		note: "Dilaksanakan secara offline di Universitas Negeri Jakarta.",
+	},
+	{
+		date: "14 Juli 2026",
+		title: "Pengumuman Juara",
+		note: "Pengumuman pemenang resmi INACOMP 2.0.",
 	},
 ];
 
 export const uiuxTimeline = [
 	{
-		date: "18 Mei – 14 Juni 2026",
-		title: "Registrasi Tim dan Fase Kerja Awal UI/UX",
-		note: "Selama periode ini peserta mendaftar sekaligus menyiapkan proposal PDF dan prototype atau mockup.",
+		date: "8 – 29 Juni 2026",
+		title: "Pendaftaran Tim & Pengumpulan Karya",
+		note: "Online via Form",
 	},
 	{
-		date: "16 Juni 2026",
-		title: "Technical Meeting Penyisihan UI/UX Design",
-		note: "Panitia menjelaskan alur seleksi awal, ketentuan berkas, dan kesiapan menuju penilaian juri.",
+		date: "29 Juni – 5 Juli 2026",
+		title: "Penjurian Penyisihan",
+		note: "Online",
 	},
 	{
-		date: "17 Juni 2026",
-		title: "Penyisihan UI/UX Design",
-		note: "Babak penyisihan UI/UX berlangsung melalui penilaian proposal dan prototype yang telah dikumpulkan peserta.",
+		date: "6 Juli 2026",
+		title: "Pengumuman Finalis",
+		note: "Online",
 	},
 	{
-		date: "19 Juni 2026",
-		title: "Pengumuman Finalis UI/UX Design",
-		note: "Finalis cabang UI/UX Design diumumkan pada tanggal resmi yang sama dengan cabang lain.",
+		date: "8 Juli 2026",
+		title: "Technical Meeting Finalis",
+		note: "Online",
 	},
 	{
-		date: "24 Juni 2026",
-		title: "Technical Meeting Final UI/UX Design",
-		note: "Finalis UI/UX Design menerima briefing untuk tahap presentasi final.",
+		date: "11 Juli 2026",
+		title: "Final Presentation",
+		note: "Offline, Universitas Negeri Jakarta",
 	},
 	{
-		date: "27 Juni 2026",
-		title: "Final Presentation UI/UX Design",
-		note: "Finalis mempresentasikan solusi, riset, dan prototype mereka di hadapan juri.",
-	},
-	{
-		date: "4 Juli 2026",
-		title: "Pengumuman Juara UI/UX Design",
-		note: "Pemenang cabang UI/UX Design diumumkan pada penutupan rangkaian INACOMP 2.0.",
+		date: "14 Juli 2026",
+		title: "Pengumuman Juara",
+		note: "Online",
 	},
 ];
 
@@ -156,47 +151,44 @@ export const homeFaqItems: FaqItem[] = [
 
 export const cpFaqItems: FaqItem[] = [
 	{
-		question: "Track Competitive Programming ini cocok untuk siapa?",
+		question: "Track CP ini cocok untuk siapa?",
 		answer:
-			"Track ini cocok untuk pelajar yang senang menyelesaikan soal algoritma, berpikir sistematis, dan bekerja tenang di bawah tekanan waktu.",
+			"Untuk pelajar SMA/sederajat yang aktif latihan problem solving. Kalau kamu udah pernah ikut OSN, KSN, atau rutin latihan di Codeforces/Kattis, kamu ada di tempat yang tepat.",
 	},
 	{
-		question: "Apa fokus utama penilaian di Competitive Programming?",
-		answer:
-			"Penilaian berfokus pada ketepatan jawaban, kualitas strategi penyelesaian, efisiensi pendekatan, dan konsistensi peserta sepanjang babak kompetisi.",
+		question: "Satu tim boleh berapa orang?",
+		answer: "2–3 orang per tim. Tidak ada tim solo.",
 	},
 	{
-		question: "Apakah peserta harus sudah berpengalaman ikut lomba coding?",
+		question: "Apakah ada babak penyisihan online?",
 		answer:
-			"Tidak harus. Peserta yang memiliki dasar algoritma dan mau berlatih dengan serius tetap memiliki peluang untuk tampil baik.",
+			"Ada. Penyisihan dilakukan online, final offline di UNJ. Jadwal lengkap ada di timeline.",
 	},
 	{
-		question: "Kapan peserta mendapat informasi teknis lebih rinci?",
-		answer:
-			"Informasi teknis lengkap akan dijelaskan panitia melalui technical meeting dan kanal resmi kompetisi.",
+		question: "Kapan batas akhir pendaftaran?",
+		answer: "29 Juni 2026. Setelah tanggal itu form ditutup.",
 	},
 ];
 
 export const uiuxFaqItems: FaqItem[] = [
 	{
-		question: "Apa yang harus dibuat peserta UI/UX Design?",
+		question: "Apa yang harus peserta UI/UX Design kumpulkan?",
 		answer:
-			"Peserta menyiapkan desain UI, laporan riset UX dalam proposal PDF, serta prototype atau mockup yang dapat ditinjau juri.",
+			"Proposal PDF, file desain (Figma atau PDF), dan link prototype interaktif. Detail lengkap ada di booklet.",
 	},
 	{
-		question: "Berapa jumlah maksimal anggota tim UI/UX?",
-		answer:
-			"Satu tim terdiri dari maksimal 3 orang, seluruh anggota harus berasal dari sekolah yang sama, dan setiap peserta hanya boleh terdaftar di satu tim.",
+		question: "Berapa anggota maksimal per tim UI/UX?",
+		answer: "2–4 orang per tim.",
 	},
 	{
-		question: "Apa yang harus dikumpulkan pada tahap seleksi awal?",
+		question: "Apa yang dinilai selain tampilan visualnya?",
 		answer:
-			"Peserta mendaftar, lalu mengumpulkan proposal PDF dan tautan prototype atau mockup, misalnya melalui Figma atau platform serupa.",
+			"Proses riset, logika keputusan desain, dan kemampuan presentasi di final. Estetika bukan satu-satunya kriteria.",
 	},
 	{
-		question: "Bagaimana alur penentuan finalis UI/UX?",
+		question: "Bagaimana cara mengetahui info terbaru?",
 		answer:
-			"Panitia dan juri menilai berkas awal peserta, memilih finalis, lalu finalis melanjutkan ke tahap presentasi sebelum penentuan pemenang.",
+			"Follow akun media sosial resmi INACOMP atau tanyakan langsung ke admin via WhatsApp.",
 	},
 ];
 

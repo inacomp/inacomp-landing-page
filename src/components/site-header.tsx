@@ -56,7 +56,9 @@ export function SiteHeader() {
 						Lihat Cabang
 					</a>
 					<a
-						href="#closing-cta"
+						href="https://forms.gle/WJBUZnyZUKkasZ9Z7"
+						target="_blank"
+						rel="noopener noreferrer"
 						className="rounded-full bg-brand-indigo px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition hover:bg-brand-navy"
 					>
 						Daftar Sekarang
@@ -107,7 +109,9 @@ export function SiteHeader() {
 							Lihat Cabang
 						</a>
 						<a
-							href="#closing-cta"
+							href="https://forms.gle/WJBUZnyZUKkasZ9Z7"
+							target="_blank"
+							rel="noopener noreferrer"
 							className="rounded-full bg-brand-indigo px-4 py-3 text-center text-sm font-semibold text-white"
 							onClick={() => setIsOpen(false)}
 						>

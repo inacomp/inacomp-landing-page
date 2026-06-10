@@ -18,6 +18,7 @@ import { Reveal } from "@/components/marketing/reveal";
 import { GalleryMosaic, SectionIntro } from "@/components/marketing/primitives";
 import { Container } from "@/components/ui/container";
 import { ContactAdminSection } from "@/components/sections/shared/contact-admin-section";
+import { BookletSection } from "@/components/sections/shared/booklet-section";
 import {
 	homeFaqItems,
 	homeGallery,
@@ -218,7 +219,7 @@ export default function Home() {
 										Dua Kategori Lomba
 									</span>
 									<span className="rounded-full border border-slate-200 bg-white px-4 py-2">
-										18 Mei - 4 Juli 2026
+										8 Juni - 14 Juli 2026
 									</span>
 								</div>
 
@@ -422,6 +423,8 @@ export default function Home() {
 					</Container>
 				</section>
 
+				<BookletSection type="all" />
+
 				<section id="timeline" className="section-space soft-section">
 					<Container>
 						<Reveal>
@@ -530,48 +533,27 @@ export default function Home() {
 				<section className="section-space pt-0">
 					<Container>
 						<Reveal>
-							<div className="hero-surface px-6 py-8 sm:px-8 sm:py-10 lg:px-12">
-								<div className="space-y-6">
-									<div className="space-y-4">
-										<span className="eyebrow">
-											<NotebookTabs className="h-3.5 w-3.5" />
-											Form Pendaftaran
-										</span>
-										<h2 className="max-w-3xl text-balance text-3xl font-bold sm:text-4xl lg:text-5xl">
-											DAFTAR SEKARANG
-										</h2>
-										<p className="max-w-2xl text-base leading-8 text-muted sm:text-lg">
-											Daftar Sekarang untuk dapat mengikuti kompetisi{" "}
-											<b>INACOMP 2.0 </b>
-										</p>
-									</div>
-
-									<div className="grid gap-4 lg:grid-cols-2">
-										{registrationCategories.map((item) => (
-											<div
-												key={item.title}
-												className="surface-card flex flex-col gap-4 px-5 py-5 sm:px-6"
-											>
-												<div className="space-y-2">
-													<p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-dark">
-														Kategori Lomba
-													</p>
-													<h3 className="text-2xl font-bold">{item.title}</h3>
-													<p className="text-sm leading-7 text-muted">
-														{item.description}
-													</p>
-												</div>
-
-												<button
-													type="button"
-													disabled
-													className="inline-flex min-h-13 items-center justify-center rounded-full border border-dashed border-slate-300 bg-slate-100 px-6 text-sm font-semibold text-slate-500 shadow-sm"
-												>
-													Form {item.title} Segera Hadir
-												</button>
-											</div>
-										))}
-									</div>
+							<div className="hero-surface px-6 py-8 sm:px-8 sm:py-10 lg:px-12 flex flex-col items-center text-center">
+								<div className="space-y-4 flex flex-col items-center">
+									<span className="eyebrow">
+										<NotebookTabs className="h-3.5 w-3.5" />
+										Form Pendaftaran
+									</span>
+									<h2 className="max-w-3xl text-balance text-3xl font-bold sm:text-4xl lg:text-5xl">
+										DAFTAR SEKARANG
+									</h2>
+									<p className="max-w-2xl text-base leading-8 text-muted sm:text-lg">
+										Daftar Sekarang untuk mengikuti kompetisi <b>INACOMP 2.0</b>
+									</p>
+									<a
+										href="https://forms.gle/WJBUZnyZUKkasZ9Z7"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="primary-button mt-4"
+									>
+										Daftar Sekarang
+									</a>
+									<p className="text-sm text-muted">Satu form untuk Competitive Programming & UI/UX Design.</p>
 								</div>
 							</div>
 						</Reveal>

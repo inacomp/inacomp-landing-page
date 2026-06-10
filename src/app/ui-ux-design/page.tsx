@@ -13,6 +13,7 @@ import { Reveal } from "@/components/marketing/reveal";
 import { SectionIntro } from "@/components/marketing/primitives";
 import { Container } from "@/components/ui/container";
 import { ContactAdminSection } from "@/components/sections/shared/contact-admin-section";
+import { BookletSection } from "@/components/sections/shared/booklet-section";
 import { uiuxFaqItems, uiuxTimeline } from "@/lib/site-content";
 import {
 	absoluteUrl,
@@ -30,45 +31,47 @@ const pageDescription =
 
 const participantsCreate = [
 	{
-		title: "UI design",
+		title: "Visual yang bicara sendiri",
 		description:
-			"Peserta menyusun tampilan antarmuka yang rapi, jelas, dan mendukung alur penggunaan produk.",
+			"Desain yang bisa dipahami tanpa penjelasan adalah desain yang baik.",
 		icon: LayoutTemplate,
 	},
 	{
-		title: "UX research report",
+		title: "Riset yang jadi fondasi",
 		description:
-			"Peserta menyusun proposal PDF yang menjelaskan masalah, target pengguna, solusi, dan alasan di balik keputusan desain.",
+			"Keputusan desain harus bisa kamu jelaskan — dan datanya harus ada.",
 		icon: SearchCheck,
 	},
 	{
-		title: "Prototype or mockup",
+		title: "Prototype yang bisa diklik",
 		description:
-			"Peserta menyerahkan tautan prototype atau mockup sebagai bentuk visualisasi solusi yang diajukan.",
+			"Bukan gambar statis. Juri ingin melihat alur yang nyata dan bisa dirasakan.",
 		icon: MonitorSmartphone,
 	},
 ];
 
 const teamRules = [
-	"Maksimal 3 orang dalam satu tim.",
-	"Seluruh anggota tim harus berasal dari sekolah yang sama.",
-	"Setiap peserta hanya boleh bergabung dalam satu tim.",
-	"Satu peserta tidak boleh terdaftar di lebih dari satu tim.",
+	"Satu tim terdiri dari 2–4 orang.",
+	"Semua anggota harus pelajar SMA/sederajat aktif saat kompetisi berlangsung.",
+	"Setiap tim hanya boleh mendaftar satu kali.",
+	"Karya yang dikirimkan harus orisinil — bukan redesign dari produk yang sudah ada di publik.",
 ];
 
 const deliverables = [
-	"Proposal PDF",
-	"Prototype atau mockup link, misalnya melalui Figma",
-	"Proposal dapat memuat latar belakang masalah, target pengguna, solusi, fitur utama, user flow, UX explanation, dan UI explanation",
+	"Proposal PDF — Deskripsi masalah, target pengguna, dan pendekatan solusi. Maks 5 halaman.",
+	"File desain (Figma link atau PDF) — UI screens lengkap dengan komponen yang rapi.",
+	"Prototype yang bisa diklik — Figma prototype atau format lain yang bisa didemonstrasikan.",
+	"Kartu pelajar / surat keterangan aktif semua anggota tim.",
+	"Foto tim (opsional, untuk keperluan dokumentasi publikasi).",
 ];
 
 const uiuxFlow = [
-	"Team Registration",
-	"Proposal & Prototype Submission",
-	"Preliminary Selection by Judges",
-	"Finalist Announcement",
-	"Final Presentation",
-	"Winner Announcement",
+	{ title: "Team Registration", description: "Daftarkan tim kamu sebelum 29 Juni. Gunakan link form yang tersedia." },
+	{ title: "Proposal & Prototype Submission", description: "Submit karya paling lambat 29 Juni via form yang sama." },
+	{ title: "Preliminary Selection by Judges", description: "Tim juri menilai secara online. Tidak ada sesi tanya jawab di tahap ini." },
+	{ title: "Finalist Announcement", description: "Finalis diumumkan 6 Juli. Cek akun media sosial INACOMP." },
+	{ title: "Final Presentation", description: "Presentasi langsung di Universitas Negeri Jakarta, 11 Juli." },
+	{ title: "Winner Announcement", description: "Juara diumumkan 14 Juli secara online." },
 ];
 
 const structuredData = {
@@ -150,26 +153,19 @@ export default function UiUxDesignPage() {
 									</span>
 									<div className="space-y-4">
 										<h1 className="max-w-4xl text-balance text-4xl font-bold leading-[1] sm:text-5xl lg:text-6xl">
-											Cabang untuk peserta yang ingin menampilkan
-											<span className="text-brand-accent">
-												{" "}
-												riset, rancangan UI, dan prototype
-											</span>{" "}
-											dalam satu alur kompetisi yang jelas.
+											Dari insight ke prototype — dalam satu kompetisi.
 										</h1>
 										<p className="max-w-2xl text-lg leading-8 text-muted">
-											UI/UX Design INACOMP 2.0 ditujukan untuk tim yang ingin
-											menunjukkan kemampuan merumuskan masalah, menyusun solusi,
-											dan mempresentasikan produk digital secara meyakinkan.
+											INACOMP 2.0 UI/UX dirancang untuk tim yang bisa membuktikan bahwa desain bukan cuma soal estetika, tapi soal keputusan yang tepat berdasarkan riset.
 										</p>
 									</div>
 								</div>
 
 								<div className="flex flex-col gap-3 sm:flex-row">
-									<Link href="/#tracks" className="primary-button">
-										Kembali ke Kategori Lomba
+									<a href="https://forms.gle/WJBUZnyZUKkasZ9Z7" target="_blank" rel="noopener noreferrer" className="primary-button">
+										Daftar Sekarang
 										<ArrowRight className="h-4 w-4" />
-									</Link>
+									</a>
 									<Link href="#uiux-flow" className="secondary-button">
 										Lihat Alur Kompetisi
 									</Link>
@@ -230,8 +226,7 @@ export default function UiUxDesignPage() {
 						<Reveal>
 							<SectionIntro
 								eyebrow="What Participants Create"
-								title="Peserta UI/UX diminta menunjukkan proses berpikir sekaligus kualitas hasil desain."
-								description="Cabang ini bukan hanya soal tampilan. Yang ingin terlihat adalah bagaimana tim membaca masalah, menyusun user flow, lalu menerjemahkannya menjadi solusi yang layak dipresentasikan."
+								title="Juri menilai cara kamu berpikir, bukan hanya hasil akhirnya."
 							/>
 						</Reveal>
 
@@ -263,33 +258,21 @@ export default function UiUxDesignPage() {
 							<Reveal>
 								<SectionIntro
 									eyebrow="Competition Flow"
-									title="Alur UI/UX Design perlu terbaca jelas karena registrasi berjalan bersama fase kerja awal."
-									description="Peserta mendaftar terlebih dahulu, lalu melanjutkan ke tahap pengumpulan proposal dan prototype sebelum masuk ke penilaian juri."
+									title="Kompetisi ini punya alur yang jelas — dari daftar sampai naik panggung."
 								/>
 							</Reveal>
 
 							<div className="grid gap-4">
 								{uiuxFlow.map((item, index) => (
-									<Reveal key={item} delay={0.05 * index}>
+									<Reveal key={item.title} delay={0.05 * index}>
 										<article className="surface-card flex items-start gap-4 p-5">
 											<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-soft text-sm font-bold text-brand-dark">
 												{index + 1}
 											</div>
 											<div>
-												<h3 className="text-lg font-bold">{item}</h3>
+												<h3 className="text-lg font-bold">{item.title}</h3>
 												<p className="mt-2 text-sm leading-7 text-muted">
-													{index === 0 &&
-														"Peserta membentuk tim dan melakukan pendaftaran sesuai ketentuan kompetisi."}
-													{index === 1 &&
-														"Setelah terdaftar, tim menyiapkan proposal PDF dan prototype atau mockup link."}
-													{index === 2 &&
-														"Juri menilai kualitas ide, struktur solusi, user flow, dan ketepatan presentasi awal."}
-													{index === 3 &&
-														"Pengumuman finalis mengikuti tanggal resmi yang sama dengan cabang Competitive Programming."}
-													{index === 4 &&
-														"Finalis mempresentasikan solusi secara langsung di hadapan juri."}
-													{index === 5 &&
-														"Pemenang diumumkan pada akhir rangkaian kompetisi INACOMP 2.0."}
+													{item.description}
 												</p>
 											</div>
 										</article>
@@ -306,8 +289,7 @@ export default function UiUxDesignPage() {
 							<Reveal>
 								<SectionIntro
 									eyebrow="Team Rules"
-									title="Aturan tim dibuat sederhana agar struktur kompetisi tetap tertib."
-									description="Semua ketentuan ini perlu tampil jelas karena langsung berpengaruh pada kelayakan tim saat registrasi."
+									title="Aturan singkat. Baca sekali, pahami selamanya."
 								/>
 							</Reveal>
 
@@ -331,8 +313,7 @@ export default function UiUxDesignPage() {
 							<Reveal>
 								<SectionIntro
 									eyebrow="Deliverables"
-									title="Berkas yang harus dipersiapkan sejak awal kompetisi."
-									description="Cabang UI/UX perlu menjelaskan deliverables dengan tegas agar peserta langsung memahami apa yang harus dibuat dan dikumpulkan."
+									title="Siapkan ini sebelum klik 'Daftar'."
 								/>
 							</Reveal>
 
@@ -355,8 +336,7 @@ export default function UiUxDesignPage() {
 						<Reveal>
 							<SectionIntro
 								eyebrow="Timeline"
-								title="Timeline UI/UX Design dibuat sesuai ritme kerja cabang ini."
-								description="Cabang UI/UX punya pola yang berbeda karena registrasi berjalan bersama fase kerja awal, lalu berlanjut ke seleksi berkas, finalis, dan presentasi final."
+								title="Dari daftar sampai pengumuman juara — semua terjadwal."
 								align="center"
 							/>
 						</Reveal>
@@ -380,6 +360,8 @@ export default function UiUxDesignPage() {
 						</div>
 					</Container>
 				</section>
+
+				<BookletSection type="uiux" />
 
 				<section className="section-space soft-section">
 					<Container>
@@ -411,38 +393,26 @@ export default function UiUxDesignPage() {
 											UI/UX Design CTA
 										</span>
 										<h2 className="max-w-3xl text-balance text-3xl font-bold sm:text-4xl lg:text-5xl">
-											Kalau timmu kuat di riset, struktur solusi, dan presentasi
-											visual, cabang ini layak dipilih.
+											Sudah ada ide di kepala? Sekarang waktunya diwujudkan.
 										</h2>
 										<p className="max-w-2xl text-base leading-8 text-muted sm:text-lg">
-											Kembali ke halaman utama untuk melihat keseluruhan
-											kompetisi, lalu pastikan timmu siap menyiapkan proposal
-											dan prototype.
+											Pendaftaran ditutup 29 Juni. Satu form untuk dua divisi.
 										</p>
 									</div>
 
 									<div className="flex flex-col gap-3">
-										<button
-											type="button"
-											disabled
-											className="inline-flex min-h-13 items-center justify-center rounded-full border border-dashed border-slate-300 bg-slate-100 px-6 text-sm font-semibold text-slate-500 shadow-sm"
+										<a
+											href="https://forms.gle/WJBUZnyZUKkasZ9Z7"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="primary-button justify-center"
 										>
-											Form UI/UX Design Segera Hadir
-										</button>
-										<Link href="/#tracks" className="primary-button">
+											Daftar Sekarang
+										</a>
+										<p className="text-sm text-muted">Satu form untuk Competitive Programming & UI/UX Design.</p>
+										<Link href="/#tracks" className="secondary-button justify-center">
 											Kembali ke Kategori Lomba
 										</Link>
-										<Link
-											href="/competitive-programming"
-											className="secondary-button"
-										>
-											Lihat Competitive Programming
-										</Link>
-										<p className="max-w-xs text-sm leading-7 text-muted">
-											Tombol form sudah disiapkan. Link Google Form cabang
-											UI/UX Design akan ditambahkan setelah form resmi
-											tersedia.
-										</p>
 									</div>
 								</div>
 							</div>

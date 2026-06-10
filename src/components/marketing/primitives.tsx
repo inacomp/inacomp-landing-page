@@ -5,7 +5,7 @@ import type { GalleryImage } from "@/lib/site-content";
 type SectionIntroProps = {
   eyebrow: string;
   title: string;
-  description: string;
+  description?: string;
   align?: "left" | "center";
   actions?: ReactNode;
 };

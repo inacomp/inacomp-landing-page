@@ -31,14 +31,10 @@ export function ContactAdminSection() {
 									CONTACT ADMIN
 								</span>
 								<h2 className="max-w-3xl text-balance text-2xl font-medium leading-[1.6] text-slate-800 sm:text-[2rem] lg:text-[2.15rem]">
-									Tim admin kami siap membantu menjelaskan detail teknis
-									kompetisi, regulasi, atau kendala pendaftaran melalui
-									WhatsApp.
+									Ada yang bingung soal teknis atau aturan pendaftaran? Langsung tanya ke admin lewat WhatsApp — lebih cepat dari nunggu email.
 								</h2>
 								<p className="max-w-2xl text-base leading-8 text-slate-700/90 sm:text-lg">
-									Pilih kontak yang ingin Anda hubungi. Pesan awal akan
-									terisi otomatis agar pertanyaan Anda bisa langsung masuk
-									ke konteks lomba.
+									Pilih kontak yang ingin Anda hubungi.
 								</p>
 							</div>
 
