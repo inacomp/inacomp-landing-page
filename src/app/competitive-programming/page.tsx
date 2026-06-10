@@ -341,7 +341,7 @@ export default function CompetitiveProgrammingPage() {
                   title="Panduan Lengkap CP"
                   label="COMPETITIVE PROGRAMMING"
                   description="Aturan, format soal, kriteria penilaian, dan semua yang perlu kamu tahu sebelum bertanding."
-                  link="https://bit.ly/inacomp2cpbooklet"
+                  link="https://drive.google.com/file/d/11W5wSYLveWGsv-FbLH6IY3uNEnsqPJft/view"
                   accentColor="#2EC4A0"
                   coverImage="/assets/cover-booklet-cp.jpg"
                 />
