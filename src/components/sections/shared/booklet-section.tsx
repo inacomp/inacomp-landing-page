@@ -17,7 +17,7 @@ const bookletData = {
     title: "Panduan Lengkap CP",
     description:
       "Aturan, format soal, kriteria penilaian, dan semua yang perlu kamu tahu sebelum bertanding.",
-    link: "https://drive.google.com/file/d/1JY9zZCDMtnG1FbxALCFtzIdwYaSGLe2S/view?usp=drive_link",
+    link: "https://drive.google.com/file/d/1-x9eYZNNAknuPu85JfHzxG-wD5w2Lzs9/view?usp=sharing",
     accentColor: "#2EC4A0",
     coverImage: "/assets/cover-booklet-cp.jpg",
   },
