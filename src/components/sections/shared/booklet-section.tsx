@@ -17,7 +17,7 @@ const bookletData = {
     title: "Panduan Lengkap CP",
     description:
       "Aturan, format soal, kriteria penilaian, dan semua yang perlu kamu tahu sebelum bertanding.",
-    link: "https://drive.google.com/file/d/11W5wSYLveWGsv-FbLH6IY3uNEnsqPJft/view",
+    link: "https://drive.google.com/file/d/1JY9zZCDMtnG1FbxALCFtzIdwYaSGLe2S/view?usp=drive_link",
     accentColor: "#2EC4A0",
     coverImage: "/assets/cover-booklet-cp.jpg",
   },
@@ -43,15 +43,9 @@ export function BookletSection({ type }: BookletSectionProps) {
         <Reveal>
           <SectionIntro
             eyebrow="Guidebook"
-            title={
-              type === "all"
-                ? "Baca dulu sebelum daftar."
-                : "Panduan Resmi Kompetisi"
-            }
+            title={"Panduan Resmi Kompetisi"}
             description={
-              type === "all"
-                ? "Semua aturan, format soal, dan kriteria penilaian sudah kami rangkum dalam satu booklet per divisi."
-                : "Pelajari aturan, kriteria penilaian, dan teknis lomba secara lengkap."
+              "Pelajari aturan, kriteria penilaian, dan teknis lomba secara lengkap."
             }
             align="center"
           />

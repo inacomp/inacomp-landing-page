@@ -279,7 +279,7 @@ export default function CompetitiveProgrammingPage() {
                 />
               </Reveal>
 
-              <div className="grid gap-4 sm:grid-cols-3">
+              <div className="grid gap-4 sm:grid-cols-2">
                 {benefits.map((item, index) => (
                   <Reveal key={item} delay={0.05 * index}>
                     <article className="surface-card h-full p-5">
@@ -341,7 +341,7 @@ export default function CompetitiveProgrammingPage() {
                   title="Panduan Lengkap CP"
                   label="COMPETITIVE PROGRAMMING"
                   description="Aturan, format soal, kriteria penilaian, dan semua yang perlu kamu tahu sebelum bertanding."
-                  link="https://drive.google.com/file/d/11W5wSYLveWGsv-FbLH6IY3uNEnsqPJft/view"
+                  link="https://drive.google.com/file/d/1JY9zZCDMtnG1FbxALCFtzIdwYaSGLe2S/view?usp=drive_link"
                   accentColor="#2EC4A0"
                   coverImage="/assets/cover-booklet-cp.jpg"
                 />
@@ -383,7 +383,7 @@ export default function CompetitiveProgrammingPage() {
                       Sudah siap nulis kode di bawah tekanan?
                     </h2>
                     <p className="max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                      Pendaftaran ditutup 29 Juni. Satu form untuk dua divisi.
+                      Pendaftaran ditutup 29 Juni. Satu form untuk dua cabang.
                     </p>
                   </div>
 
