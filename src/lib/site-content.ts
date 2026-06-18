@@ -157,7 +157,7 @@ export const cpFaqItems: FaqItem[] = [
 	},
 	{
 		question: "Satu tim boleh berapa orang?",
-		answer: "2–3 orang per tim. Tidak ada tim solo.",
+		answer: "maksimal 2 orang per tim. Solo diperbolehkan",
 	},
 	{
 		question: "Apakah ada babak penyisihan online?",
@@ -178,7 +178,7 @@ export const uiuxFaqItems: FaqItem[] = [
 	},
 	{
 		question: "Berapa anggota maksimal per tim UI/UX?",
-		answer: "2–4 orang per tim.",
+		answer: "2–3 orang per tim.",
 	},
 	{
 		question: "Apa yang dinilai selain tampilan visualnya?",
