@@ -14,12 +14,12 @@ export type GalleryImage = {
 
 export const officialTimeline = [
 	{
-		date: "8 – 29 Juni 2026",
+		date: "8 Juni – 1 Juli 2026",
 		title: "Pendaftaran Peserta Perlombaan",
 		note: "Pendaftaran dibuka untuk seluruh peserta dari dua Kategori Lomba.",
 	},
 	{
-		date: "29 Juni – 5 Juli 2026",
+		date: "2 Juli – 5 Juli 2026",
 		title: "Penjurian Penyisihan UI/UX",
 		note: "Peserta UI/UX masuk ke fase seleksi awal berdasarkan berkas dan karya yang dikumpulkan.",
 	},
@@ -57,7 +57,7 @@ export const officialTimeline = [
 
 export const cpTimeline = [
 	{
-		date: "8 – 29 Juni 2026",
+		date: "8 Juni – 1 Juli 2026",
 		title: "Pendaftaran Peserta Perlombaan",
 		note: "Pendaftaran online untuk peserta cabang Competitive Programming.",
 	},
@@ -95,12 +95,12 @@ export const cpTimeline = [
 
 export const uiuxTimeline = [
 	{
-		date: "8 – 29 Juni 2026",
+		date: "8 Juin – 1 Juli 2026",
 		title: "Pendaftaran Tim & Pengumpulan Karya",
 		note: "Online via Form",
 	},
 	{
-		date: "29 Juni – 5 Juli 2026",
+		date: "2 Juli – 5 Juli 2026",
 		title: "Penjurian Penyisihan",
 		note: "Online",
 	},
