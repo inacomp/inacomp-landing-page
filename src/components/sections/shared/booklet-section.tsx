@@ -27,7 +27,7 @@ const bookletData = {
 		title: "Panduan Lengkap UI/UX",
 		description:
 			"Alur kompetisi, kriteria penilaian, format pengumpulan karya, dan template yang bisa kamu gunakan.",
-		link: "https://drive.google.com/file/d/1Peif8Z4eGpW0857rPVNLF46Th0JPuUhr/view",
+		link: "https://drive.google.com/file/d/1aaYz70OrkmnkbPgEruL8G74XqgFlYhqk/view",
 		accentColor: "#2EA0C4",
 		coverImage: "/assets/cover-booklet-uiux.jpg",
 	},
