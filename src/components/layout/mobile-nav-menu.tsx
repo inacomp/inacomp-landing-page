@@ -123,13 +123,15 @@ export function MobileNavMenu({ navLinks }: MobileNavMenuProps) {
 									</motion.div>
 								))}
 								<motion.div variants={itemVariants} className="pt-3">
-									<Link
-										href="/#tracks"
+									<a
+										href="https://forms.gle/WJBUZnyZUKkasZ9Z7"
+										target="_blank"
+										rel="noopener noreferrer"
 										onClick={() => setIsOpen(false)}
 										className="primary-button w-full justify-center py-4 text-base shadow-lg"
 									>
-										Lihat Kategori
-									</Link>
+										Daftar
+									</a>
 								</motion.div>
 							</div>
 						</motion.div>

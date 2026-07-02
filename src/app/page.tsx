@@ -181,6 +181,9 @@ const homeStructuredData = {
   ],
 };
 
+const SPONSOR_LOGO = "/assets/dewa-web-logo.png";
+const SPONSOR_URL = "https://www.dewaweb.com";
+
 export default function Home() {
   return (
     <>
@@ -231,6 +234,29 @@ export default function Home() {
                   <Link href="#timeline" className="secondary-button">
                     Lihat Timeline
                   </Link>
+                </div>
+
+                {/* Official Partner */}
+                <div className="mt-8 space-y-2">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    Official Partner:
+                  </p>
+                  <a
+                    href={SPONSOR_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block transition-transform duration-300 hover:scale-105"
+                  >
+                    <div className="relative h-10 w-32 sm:h-12 sm:w-36">
+                      <Image
+                        src={SPONSOR_LOGO}
+                        alt="Dewaweb Logo"
+                        fill
+                        sizes="(max-width: 640px) 128px, 144px"
+                        className="object-contain object-left"
+                      />
+                    </div>
+                  </a>
                 </div>
               </Reveal>
 
